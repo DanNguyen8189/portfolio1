@@ -1,0 +1,319 @@
+html{
+    font-size: 16px;
+  }
+  
+  img{
+  float: left;
+  margin: 1em;
+  opacity: 0.6;
+  }
+  
+  /*.navigation{
+    padding-top: 2.5em;
+    padding-bottom: 2.5em;
+    text-align: right;
+  }
+  .navigation ul{
+    position: relative;
+    display: inline;
+    text-align: center;
+  }
+  
+  
+  .navigation ul li{
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+    padding: 5px 2em;
+    font-size: 20px;
+    font-family: 'Actor', sans-serif;
+    color: #cd70ff;
+  }
+  
+  .navigation ul li:hover{
+    color: #ebadff;
+    text-decoration: underline;
+  }
+  
+  .navigation ul li:active{
+    color: #603d77;
+  }
+  */
+  /*----- Toggle Button -----*/
+  .toggle-nav {
+      display:none;
+  }
+   
+  /*----- Menu -----*/
+  @media screen and (min-width: 860px) {
+      .menu {
+          width:100%;
+          box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+          border-radius:3px;
+      }
+  }
+   
+  .menu{
+      text-align: right;
+  }
+  .menu ul {
+      display:inline-block;
+  }
+   
+  .menu li {
+      margin:20px 35px;
+      margin-top: 33px; /*override, was uneven*/
+      float:left;
+      list-style:none;
+      font-size:17px;
+      font-size: 20px;
+      font-family: 'Actor', sans-serif;
+      color: #cd70ff;
+  }
+   
+  /*.menu li:last-child {
+      margin-right:0px;
+  }*/
+   
+  .menu a {
+      text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+      color:#cd70ff;
+      transition:color linear 0.15s;
+  }
+   
+  .menu a:hover, .menu .current-item a {
+      text-decoration:underline;
+      color:#7ed3b4;
+  }
+  
+  
+  
+  /*----- Responsive Menu -----*/
+  @media screen and (max-width: 1150px) {
+      .wrap {
+          width:90%;
+      }
+  }
+  @media screen and (max-width: 860px) {
+      
+      .navigation{
+          text-align: right;
+      }
+      .menu {
+          margin-right: 1em;
+          z-index: 1;
+          position:relative;
+          display:inline-block;
+      }
+   
+      .menu ul.active {
+          display:none;
+      }
+   
+      .menu ul {
+          text-align: left;
+          position:absolute;
+          top:120%;
+          left:-146px;
+          padding:10px 18px;
+          box-shadow:6px 6px 6px rgba(0,0,0,0.15);
+          border-radius:3px;
+          background:#303030;
+      }
+   
+      .menu ul:after {
+          width:0px;
+          height:0px;
+          position:absolute;
+          top:0%;
+          left:168px;
+          content:'';
+          transform:translate(0%, -100%);
+          border-left:7px solid transparent;
+          border-right:7px solid transparent;
+          border-bottom:7px solid #303030;
+      }
+   
+      .menu li {
+          margin:10px 5px;
+          float:none;
+          display:block;
+      }
+   
+      .menu a {
+          display:block;
+      }
+   
+      .toggle-nav {
+          padding:20px;
+          float:left;
+          display:inline-block;
+          box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+          border-radius:3px;
+          background:#303030;
+          text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+          color:#777;
+          font-size:20px;
+          transition:color linear 0.15s;
+      }
+   
+      .toggle-nav:hover, .toggle-nav.active {
+          text-decoration:none;
+          color:#;
+      }
+  }
+  
+  /*Body*/
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: url('http://i.imgur.com/GADf33a.png?1');
+    background-size: cover;
+  }
+  
+  #banner {
+    margin: 7em auto;
+    display: table;
+    text-align: center;
+    overflow: scroll; /* remove or nah */
+  }
+  
+  #banner h1{
+    padding-left:  15px;
+    margin: 0 50px;
+    display: inline-block;
+    font-size: 4em;
+    font-family: 'Architects Daughter', sans-serif;
+    font-weight: lighter; /*why is this not doing anything*/
+    color: white;
+    opacity: 0.8;
+  }
+  
+  #banner h4{
+    margin: 0 50px;
+    position: relative;
+    display: block;
+    text-align: left;
+    padding-left: 15px;
+    font-family: 'Actor', sans-serif;
+    color: white;
+    opacity: 0.8;
+  }
+  
+  #image-container{
+    overflow: hidden;
+  }
+  
+  #banner ul{
+    /*position: absolute;
+    top: 9rem;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    display: inline-block;
+    position: relative;
+    margin: 10px auto;
+    padding-right: 25px;
+  }
+  
+  #banner ul li{
+    display: inline-block;
+    list-style: none;
+    position: relative;
+    margin: 30px 20px;
+  }
+  
+  #banner ul li a{
+    width: 70px;
+    height: 40px;
+    background: #fff;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    font-size: 36px;
+    transition: 0.5s;
+    color: black;
+    opacity: 0.6
+  }
+  
+  #banner ul li a:hover{
+    transform: rotate(7deg) scale(1.1);
+    opacity: 0.8;
+  }
+  
+  /*On-click for social media buttons*/
+  #banner ul li a:active{
+    transform: rotate(15deg) scale(1.1);
+    opacity: 0.4;
+  }
+  
+  #banner ul li a:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transform: rotate(60deg);
+  }
+  
+  #banner ul li a:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    z-index: -1;
+    transform: rotate(-60deg);
+  }
+  
+  /* 
+  ul li:nth-child(1) a,
+  ul li:nth-child(1) a:before,
+  ul li:nth-child(1) a:after {
+    background: white;
+  }
+  
+  ul li:nth-child(2) a,
+  ul li:nth-child(2) a:before,
+  ul li:nth-child(2) a:after {
+    background: white;
+  }
+  
+  ul li:nth-child(3) a,
+  ul li:nth-child(3) a:before,
+  ul li:nth-child(3) a:after {
+    background: white;
+  }
+  
+  ul li:nth-child(4) a,
+  ul li:nth-child(4) a:before,
+  ul li:nth-child(4) a:after {
+    background: white;
+  }*/
+  
+  
+  
+  @media only screen and (max-width: 935px) {
+  
+    #banner h4{
+      text-align: center;
+    }
+  }
+  
+  @media only screen and (max-width: 510px) {
+    #banner{
+      margin: 3em auto;
+    }
+    #banner h1{
+      font-size: 3rem;
+    }
+    #banner h4{
+      font-size: 13px;
+    }
+  }
+  
+  
