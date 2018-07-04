@@ -8,37 +8,6 @@ html{
   opacity: 0.6;
   }
   
-  /*.navigation{
-    padding-top: 2.5em;
-    padding-bottom: 2.5em;
-    text-align: right;
-  }
-  .navigation ul{
-    position: relative;
-    display: inline;
-    text-align: center;
-  }
-  
-  
-  .navigation ul li{
-    display: inline-block;
-    list-style-type: none;
-    position: relative;
-    padding: 5px 2em;
-    font-size: 20px;
-    font-family: 'Actor', sans-serif;
-    color: #cd70ff;
-  }
-  
-  .navigation ul li:hover{
-    color: #ebadff;
-    text-decoration: underline;
-  }
-  
-  .navigation ul li:active{
-    color: #603d77;
-  }
-  */
   /*----- Toggle Button -----*/
   .toggle-nav {
       display:none;
@@ -146,7 +115,7 @@ html{
    
       .toggle-nav {
           padding:20px;
-          float:left;
+          /*float:left;*/
           display:inline-block;
           box-shadow:0px 1px 1px rgba(0,0,0,0.15);
           border-radius:3px;
@@ -159,7 +128,7 @@ html{
    
       .toggle-nav:hover, .toggle-nav.active {
           text-decoration:none;
-          color:#;
+          color:gray;
       }
   }
   

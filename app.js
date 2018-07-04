@@ -16,19 +16,22 @@ function render(path, response) {
 
 module.exports = {
 	handleRequest: function(request, response){
-		response.writeHead(200, {'Content-Type': 'text/html'});
+		
 		
 		var path = url.parse(request.url).pathname;
 		switch(path){
-			case '/':
+			case '/home':
+			    response.writeHead(200, {'Content-Type': 'text/html'});
 				render('./home.html', response);
 				break;
-			/*case '/process':
-				render('./process.html', response);
+			case '/home.css':
+			    response.writeHead(200, {'Content-Type': 'text/css'});
+				render('./home.css', response);
 				break;
-			case '/gpsScript.js':
-				render('./gpsScript.js', response);
-				break;*/
+			case '/home.js':
+			    response.writeHead(200, {'Content-Type': 'text/html'});
+				render('./home.js', response);
+				break;
 			default:
 				response.writeHead(404);
 				response.write('Route not defined');
