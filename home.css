@@ -37,7 +37,7 @@ html{
     font-size:17px;
     font-size: 20px;
     font-family: 'Actor', sans-serif;
-    color: #cd70ff;
+    color: #df87d7;
   }
      
   /*.menu li:last-child {
@@ -46,7 +46,7 @@ html{
     
   .menu a {
       text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-      color:#cd70ff;
+      color:#df87d7;
       transition:color linear 0.15s;
   }
     
@@ -134,7 +134,7 @@ html{
   body{
     margin: 0;
     padding: 0;
-    background-image: url('http://i.imgur.com/GADf33a.png?1');
+    background-image: url('https://i.imgur.com/FiEOKys.jpg');
     background-size: cover;
   }
   
