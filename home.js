@@ -1,4 +1,4 @@
-var main = function() {
+/*var main = function() {
 
 jQuery(document).ready(function() {
     jQuery('.drop-down').click(function(e) {
@@ -11,4 +11,11 @@ jQuery(document).ready(function() {
   
 };
 
-$(document).ready(main);
+$(document).ready(main);*/
+
+new Vue({
+    el: '.menu',
+    data: {
+      show: true
+    }
+})

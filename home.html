@@ -12,11 +12,10 @@
     <!--JQuery connect-->  
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js'></script>
     <!--vue.js connect-->  
-    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
-    <script src='home.js'></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
   </head>
 
-  <body>
+  <!--<body>
     
     <img src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
     </div>
@@ -45,5 +44,38 @@
         <li><a href=# target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
       </ul>
     </div>
-  </body>
+    <script src='home.js'></script>
+  </body>-->
+  <body>
+      <img src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
+      </div>
+      
+      <div class = navigation>
+        <nav class='menu' style='background-color: rgba(0,0,0,0.4) !important'>
+          <transition name="fade">
+            <ul class='active' v-if='!show'>
+              <li class='current-item'><a href='#'>HOME</a></li>
+              <li><a href='#'>PROJECTS</a></li>
+              <li><a href='#'>ART GALLERY</a></li>
+              <li><a href='#'>ABOUT/CONTACT</a></li>
+            </ul>
+          </transition>
+          <a class='drop-down' href='#' v-on:click="show = !show">&#9776;</a>
+        </nav>
+      </div>
+      
+      <div id=banner>
+        <div id=text>
+          <h1>DAN NGUYEN</h1>
+          <h4>Software Engineer, Artist</h4>
+        </div>
+        <ul id=social_media>
+          <li><a href='https://www.linkedin.com/in/dannguyen8189/' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
+          <li><a href='https://github.com/DanNguyen8189' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
+          <li><a href=# target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+          <li><a href=# target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
+        </ul>
+      </div>
+      <script src='home.js'></script>
+    </body>
 </html>
