@@ -10,7 +10,7 @@ html{
   }
     
   /*----- Toggle Button -----*/
-  .toggle-nav {
+  .drop-down {
     display:none;
   }
      
@@ -37,7 +37,7 @@ html{
     font-size:17px;
     font-size: 20px;
     font-family: 'Actor', sans-serif;
-    color: #df87d7;
+    color: #df9ed9;
   }
      
   /*.menu li:last-child {
@@ -45,89 +45,84 @@ html{
   }*/
     
   .menu a {
-      text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-      color:#df87d7;
-      transition:color linear 0.15s;
+    text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+    color:#df9ed9;
+    transition:color linear 0.15s;
   }
     
   .menu a:hover, .menu .current-item a {
-      text-decoration:underline;
-      color:#7ed3b4;
+    text-decoration:underline;
+    color:#7ed3b4;
   }
     
   /*----- Responsive Menu -----*/
   @media screen and (max-width: 1150px) {
-      .wrap {
-          width:90%;
-      }
+    .wrap {
+      width:90%;
+    }
   }
   @media screen and (max-width: 860px) {
-      
-      .navigation{
-          text-align: right;
-      }
-      .menu {
-          margin-right: 1em;
-          z-index: 1;
-          position:relative;
-          display:inline-block;
-      }
+    .navigation{
+      text-align: right;
+    }
+    .menu {
+      margin-right: 1em;
+      z-index: 1;
+      position:relative;
+      display:inline-block;
+    }  
+    .menu ul.active {
+      display:none;
+    }
+    .menu ul {
+      text-align: left;
+      position:absolute;
+      top:120%;
+      left:-146px;
+      padding:10px 18px;
+      box-shadow:6px 6px 6px rgba(0,0,0,0.15);
+      border-radius:3px;
+      background:#303030;
+    }
+    .menu ul:after {
+      width:0px;
+      height:0px;
+      position:absolute;
+      top:0%;
+      left:168px;
+      content:'';
+      transform:translate(0%, -100%);
+      border-left:7px solid transparent;
+      border-right:7px solid transparent;
+      border-bottom:7px solid #303030;
+    }
+    .menu li {
+      margin:10px 5px;
+      float:none;
+      display:block;
+    }
     
-      .menu ul.active {
-          display:none;
-      }
+    .menu a {
+      display:block;
+    }
     
-      .menu ul {
-          text-align: left;
-          position:absolute;
-          top:120%;
-          left:-146px;
-          padding:10px 18px;
-          box-shadow:6px 6px 6px rgba(0,0,0,0.15);
-          border-radius:3px;
-          background:#303030;
-      }
+    .drop-down {
+      padding:20px;
+        /*float:left;*/
+      display:inline-block;
+      box-shadow:0px 1px 1px rgba(0,0,0,0.15);
+      border-radius:3px;
+      background:#303030;
+      text-shadow:0px 1px 0px rgba(0,0,0,0.5);
+      color:#777;
+      font-size:20px;
+      transition:color linear 0.15s;
+    }
     
-      .menu ul:after {
-          width:0px;
-          height:0px;
-          position:absolute;
-          top:0%;
-          left:168px;
-          content:'';
-          transform:translate(0%, -100%);
-          border-left:7px solid transparent;
-          border-right:7px solid transparent;
-          border-bottom:7px solid #303030;
-      }
-    
-      .menu li {
-          margin:10px 5px;
-          float:none;
-          display:block;
-      }
-    
-      .menu a {
-          display:block;
-      }
-    
-      .toggle-nav {
-          padding:20px;
-          /*float:left;*/
-          display:inline-block;
-          box-shadow:0px 1px 1px rgba(0,0,0,0.15);
-          border-radius:3px;
-          background:#303030;
-          text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-          color:#777;
-          font-size:20px;
-          transition:color linear 0.15s;
-      }
-    
-      .toggle-nav:hover, .toggle-nav.active {
-          text-decoration:none;
-          color:gray;
-      }
+    .drop-down:hover, .drop-down.active {
+      text-decoration:none;
+      color:gray;
+    }
   }
   
   /*Body*/
@@ -219,7 +214,8 @@ html{
   }
   
   #social_media li a:hover{
-    transform: rotate(7deg) scale(1.1);
+    transition: transform 0.25s;
+    transform: rotate(7deg);
     opacity: 0.9;
     color: #59316e;
     background: #aefade;
@@ -227,7 +223,8 @@ html{
   
   /*On-click for social media buttons*/
   #social_media li a:active{
-    transform: rotate(15deg) scale(1.1);
+    transition: transform 0.2s;
+    transform: rotate(15deg) scale(0.9);
     opacity: 0.4;
   }
   
