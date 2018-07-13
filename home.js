@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
 $(document).ready(main);*/
 
 new Vue({
-    el: '.menu',
+    el: '.drop-down-menu',
     data: {
       show: true
     }
