@@ -2,31 +2,43 @@ html{
     font-size: 16px;
   }
   
+  body{
+    margin: 0;
+    padding: 0;
+    background-image: url('https://i.imgur.com/IEF6h3s.jpg');
+    background-size: cover;
+    background-position: center-bottom;
+  }
+  
   /*----- Top left signature ----*/
-  img{
+  #signature{
     float: left;
-    margin: 1rem;
+    padding-top: 5px;
+    min-width: 100px;
+    max-width: 100px;
+    margin: auto;
     opacity: 0.6;
   }
     
-  /*----- Toggle Button -----*/
-
   /*----- Navigation properties----*/
   .navigation{
     text-align: right;
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Actor', sans-serif;
     color: #df9ed9;
     transition: color linear 0.15s;
   }
 
+  .bar-menu{
+    margin-top: 25px;
+  }
   .bar-menu ul{
     display: inline-block;
   }
 
   .bar-menu li {
-    margin:20px 35px;
-    margin-top: 33px; /*override, was uneven*/
+    margin:6px 30px;
+    margin-top: 20px; /*override, was uneven*/
     float:left;
     list-style:none;
     font-size: inherit;
@@ -40,7 +52,7 @@ html{
     transition: inherit;
   }
     
-  .bar-menu a:hover, .bar-menu .current-item a {
+  .bar-menu a:hover, .current-item a {
     text-decoration:underline;
     color:#7ed3b4;
   }
@@ -93,6 +105,11 @@ html{
     color: inherit;
     transition: inherit;
   }
+
+  .drop-down-menu a:hover, .current-item a {
+    text-decoration:underline;
+    color:#7ed3b4;
+  }
   
   .drop-down-symbol {
     display: none;
@@ -122,8 +139,6 @@ html{
       display: none
     }
 
-
-
     .drop-down-menu{
       display: inline-block;
     }
@@ -145,22 +160,14 @@ html{
     }
   }
   
-  /*Body*/
-  body{
-    margin: 0;
-    padding: 0;
-    background-image: url('https://i.imgur.com/FiEOKys.jpg');
-    background-size: cover;
-  }
-  
   #banner {
-    margin: 10% auto;
+    margin: 8% auto;
     text-align: center;
   }
 
   #text{
     color: white;
-    opacity: 0.8;
+    opacity: 0.9;
     display: inline-block;
   }
   #text h1{
@@ -184,7 +191,7 @@ html{
     top: 9rem;
     left: 50%;
     transform: translate(-50%, -50%); */
-    display: inline-block;
+    display: inline;
     position: relative;
     margin: auto; 
   }
@@ -206,7 +213,7 @@ html{
     font-size: 36px;
     transition: 0.5s;
     color: black;
-    opacity: 0.6
+    opacity: 0.75;
   }
   
   #social_media li a:before{
@@ -236,11 +243,31 @@ html{
   #social_media li a:hover{
     transition: transform 0.25s;
     transform: rotate(7deg);
-    opacity: 0.9;
-    color: #59316e;
-    background: #aefade;
+    opacity: 1;
+    /*color: #59316e;*/
+    /*background: #aefade;*/
   }
   
+  #linkedin a:hover{
+    background: #007bb5;
+    color: white;
+  }
+
+  #github a:hover{
+    background: black;
+    color: white;
+  }
+
+  #instagram a:hover{
+    background: #c32aa3;
+    color: white;
+  }
+
+  #twitter a:hover{
+    background:#1da1f2; 
+    color: white;
+  }
+
   /*On-click for social media buttons*/
   #social_media li a:active{
     transition: transform 0.2s;
