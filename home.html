@@ -15,17 +15,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.4.0/vue.js"></script>
   </head>
 
-  <body>
+  <body background='https://i.imgur.com/IEF6h3s.jpg'>
       <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
       </div>
+      <!--<div id='signature'><img src='http://i.imgur.com/EglY7hp.png'></div>-->
       
       <div class = navigation>
         <nav class='bar-menu' style='background-color: rgba(0,0,0,0.3) !important'>
             <ul class='default'>
               <li class='current-item'><a href='#'>HOME</a></li>
+              <li><a href='#'>ABOUT</a></li>
+              <li><a href='#'>PROFILE</a></li>
               <li><a href='#'>PROJECTS</a></li>
-              <li><a href='#'>ART GALLERY</a></li>
-              <li><a href='#'>ABOUT/CONTACT</a></li>
+              <li><a href='#'>CONTACT</a></li>
             </ul>
         </nav>
       </div>
@@ -35,9 +37,10 @@
           <transition name="fade">
             <ul class='active' v-if='!show'>
               <li class='current-item'><a href='#'>HOME</a></li>
+              <li><a href='#'>ABOUT</a></li>
+              <li><a href='#'>PROFILE</a></li>
               <li><a href='#'>PROJECTS</a></li>
-              <li><a href='#'>ART GALLERY</a></li>
-              <li><a href='#'>ABOUT/CONTACT</a></li>
+              <li><a href='#'>CONTACT</a></li>
             </ul>
           </transition>
           <a class='drop-down-symbol' href='#' v-on:click="show = !show">&#9776;</a>
