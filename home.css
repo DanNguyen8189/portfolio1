@@ -180,7 +180,7 @@ body{
 #text h1{
   display: block;
   font-size: 5em;
-  font-family: 'Architects Daughter', sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-weight: lighter; /*why is this not doing anything*/
   color: inherit;
   opacity: inherit;
@@ -188,7 +188,8 @@ body{
 
 #text h4{
   display: block;
-  font-family: 'Actor', sans-serif;
+  /*font-family: 'Actor', sans-serif;*/
+  font-family: 'Architects Daughter', sans-serif;
   color: inherit;
   opacity: inherit;
 }
@@ -201,7 +202,8 @@ body{
   display: inline-block;
   position: relative;
   margin: auto; 
-  margin-left: -29px;
+  /*margin-left: -29px;*/
+  right: 20px;
 }
 
 #social_media li{
