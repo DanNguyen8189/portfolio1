@@ -15,11 +15,14 @@ body{
 
 /*----- Top left signature ----*/
 #signature{
+  position: relative;
+  left: 15px;
   float: left;
   padding-top: 5px;
   min-width: 100px;
   max-width: 100px;
-  margin: auto;
+  min-height: 60px;
+  max-height: 60px;
   opacity: 0.6;
 }
   
@@ -55,7 +58,7 @@ body{
   transition: inherit;
 }
   
-.bar-menu a:hover, .current-item a {
+.bar-menu a:hover, .bar-menu a:active, .current-item a {
   text-decoration:underline;
   color:#7ed3b4;
 }
@@ -70,11 +73,11 @@ body{
   display:none;
 }*/
 .drop-down-menu ul {
-  display: inline-block;
+  display: block;
   text-align: left;
   position:absolute;
   top:120%;
-  left:-146px;
+  right: 0; /*forces the menu positioning to expand from right side*/
   padding:10px 18px;
   box-shadow:6px 6px 6px rgba(0,0,0,0.15);
   border-radius:3px;
@@ -126,7 +129,7 @@ body{
   font-size:20px;
   transition:color linear 0.15s;
 }
-  
+
 /*----- Responsive Menu -----*/
 
 @media screen and (min-width: 860px) {
