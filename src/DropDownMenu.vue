@@ -10,22 +10,29 @@
                     <li><a href='#'>CONTACT</a></li>
                 </ul>
             </transition>
-            <a class='drop-down-symbol' href='#' v-on:click="show = !show">&#9776;</a>
+            <a class='drop-down-symbol' href='#' v-on:click='show = !show'>&#9776;</a>
         </nav>
     </div>
 </template>
 
+<!--Script to toggle appearance and dissappearance of drop down menu-->
 <script>
+    export default{
+        data() {
+            return{
+                show: false
+            }
+        }
+    }
 </script>
 
-<style>
+<style scoped>
 .drop-down-menu {
-    display: none;
     margin-right: 1em;
     z-index: 1;
     position:relative;
 }  
-/*.drop-down-menu ul.active { //this was needed for the jquery verison
+/*#drop-down-menu ul.active { //this was needed for the jquery verison
   display:none;
 }*/
 .drop-down-menu ul {
@@ -84,5 +91,35 @@
     color:#777;
     font-size:20px;
     transition:color linear 0.15s;
+}
+
+@media screen and (min-width: 860px) {
+    .drop-down-menu{
+        display: none;
+    }
+    .drop-down-symbol{
+        display: none;
+    }
+}
+@media screen and (max-width: 860px) {
+    .drop-down-menu{
+        display: inline-block;
+    }
+
+    .drop-down-symbol{
+        display: inline-block;
+    }
+    
+    /*.drop-down-symbol:hover, .drop-down-symbol.active {
+        text-decoration:none;
+        color:gray;
+    }*/
+
+    .fade-enter-active, .fade-leave-active {
+        transition: opacity .5s;
+    }
+    .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+        opacity: 0;
+    }
 }
 </style>

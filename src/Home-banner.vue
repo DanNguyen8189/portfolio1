@@ -4,7 +4,7 @@
             <h1>DAN NGUYEN</h1>
             <h4>Software Engineer, Artist</h4>
         </div>
-        <ul id=social_media>
+        <ul class=social_media>
             <li id='linkedin'><a href='https://www.linkedin.com/in/dannguyen8189/' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
             <li id='github'><a href='https://github.com/DanNguyen8189' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
             <li id='instagram'><a href=# target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
@@ -16,7 +16,7 @@
 <script>    
 </script>
 
-<style>
+<style scoped>
 
 #text{
   margin: 0 35px;
@@ -41,7 +41,7 @@
   opacity: inherit;
 }
 
-#social_media{
+.social_media{
   /*position: absolute;
   top: 9rem;
   left: 50%;
@@ -53,14 +53,14 @@
   right: 20px;
 }
 
-#social_media li{
+.social_media li{
   display: inline-block;
   list-style: none;
   position: relative;
   margin: 35px 20px;
 }
 
-#social_media li a{
+.social_media li a{
   width: 70px;
   height: 40px;
   background: #fff;
@@ -73,7 +73,7 @@
   opacity: 0.75;
 }
 
-#social_media li a:before{
+.social_media li a:before{
   content: '';
   position: absolute;
   top: 0;
@@ -85,7 +85,7 @@
   transform: rotate(60deg);
 }
 
-#social_media li a:after{
+.social_media li a:after{
   content: '';
   position: absolute;
   top: 0;
@@ -97,7 +97,7 @@
   transform: rotate(-60deg);
 }
 
-#social_media li a:hover{
+.social_media li a:hover{
   transition: transform 0.25s;
   transform: rotate(7deg);
   opacity: 1;
@@ -126,7 +126,7 @@
 }
 
 /*On-click for social media buttons*/
-#social_media li a:active{
+.social_media li a:active{
   transition: transform 0.2s;
   transform: rotate(15deg) scale(0.9);
   opacity: 0.4;
@@ -140,10 +140,10 @@
   #text h4{
     font-size: 13px;
   }
-  #social_media li{
+  .social_media li{
     margin: 26.25px 15px;
   }
-  #social_media li a{
+  .social_media li a{
     width: 52.5px;
     height: 30px;
     line-height: 30px;

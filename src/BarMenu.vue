@@ -1,4 +1,4 @@
-<template>
+<template id = 'bar-menu-root'>
     <div>
         <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
         <ul id= 'navigationlinks'>
@@ -14,7 +14,7 @@
 <script>
 </script>
 
-<style>
+<style scoped>
 #signature{
     position: relative;
     left: 15px;
@@ -46,13 +46,6 @@
 #navigationlinks a:hover, #navigationlinks a:active, .current-item a {
     text-decoration:underline;
     color:#7ed3b4;
-}
-@media screen and (min-width: 860px) {
-  #bar-menu-root{
-    width:100%;
-    box-shadow:0px 1px 1px rgba(255, 255, 255, 0.35);
-    border-radius:3px;
-  }
 }
 </style>
 
