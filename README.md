@@ -1,5 +1,7 @@
 # personal-website
 
+Note: not yet ready to run on github pages
+
 > A Vue.js project
 
 ## Build Setup
