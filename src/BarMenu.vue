@@ -1,6 +1,7 @@
 <template>
     <div>
-        <ul>
+        <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
+        <ul id= 'navigationlinks'>
             <li class='current-item'><a href='#'>HOME</a></li>
             <li><a href='#'>ABOUT</a></li>
             <li><a href='#'>PROFILE</a></li>
@@ -14,10 +15,21 @@
 </script>
 
 <style>
-ul{
+#signature{
+    position: relative;
+    left: 15px;
+    float: left;
+    padding-top: 5px;
+    min-width: 100px;
+    max-width: 100px;
+    min-height: 60px;
+    max-height: 60px;
+    opacity: 0.6;
+}
+#navigationlinks{
     display: inline-block;
 } 
-li{
+#navigationlinks li{
     margin:6px 30px;
     margin-top: 20px; /*override, was uneven*/
     float:left;
@@ -26,14 +38,21 @@ li{
     font-family: inherit;
     color: inherit;
 } 
-a{
+#navigationlinks a{
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color: inherit;
     transition: inherit;
 }
-a:hover, a:active, .current-item a {
+#navigationlinks a:hover, #navigationlinks a:active, .current-item a {
     text-decoration:underline;
     color:#7ed3b4;
+}
+@media screen and (min-width: 860px) {
+  #bar-menu-root{
+    width:100%;
+    box-shadow:0px 1px 1px rgba(255, 255, 255, 0.35);
+    border-radius:3px;
+  }
 }
 </style>
 

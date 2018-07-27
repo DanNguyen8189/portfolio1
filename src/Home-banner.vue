@@ -131,23 +131,13 @@
   transform: rotate(15deg) scale(0.9);
   opacity: 0.4;
 }
-@media only screen and (max-width: 935px) {
-  #banner h4{
-    text-align: center;
-  }
-}
+
 
 @media only screen and (max-width: 510px) {
-  body{
-    background-position: center;
-  }
-  #banner{
-    margin: 3rem auto;
-  }
-  #banner h1{
+  #text h1{
     font-size: 3rem;
   }
-  #banner h4{
+  #text h4{
     font-size: 13px;
   }
   #social_media li{

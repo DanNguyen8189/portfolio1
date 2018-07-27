@@ -3,12 +3,14 @@ import App from './App.vue'
 import BarMenu from './BarMenu'
 import DropDown from './DropDownMenu'
 import ImageCredit from './ImageCredit'
-import Banner from './Banner'
+import Banner from './Home-banner'
+import Navigation from './Navigation-component.vue'
 
 Vue.component('bar-menu', BarMenu);
 Vue.component('drop-down-menu', DropDown);
 Vue.component('image-credit', ImageCredit);
-Vue.component('banner', Banner);
+Vue.component('home-banner', Banner);
+Vue.component('navigation-component', Navigation)
 
 new Vue({
   el: '#app',
