@@ -1,17 +1,27 @@
-<template id = 'bar-menu-root'>
+<template>
     <div>
         <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
         <ul id= 'navigationlinks'>
-            <li class='current-item'><a href='#'>HOME</a></li>
-            <li><a href='#'>ABOUT</a></li>
-            <li><a href='#'>PROFILE</a></li>
-            <li><a href='#'>PROJECTS</a></li>
-            <li><a href='#'>CONTACT</a></li>
+            <li><button @click='goHome'>HOME</button></li>
+            <li><button @click='goAbout'>ABOUT</button></li>
+            <li><button @click='goAbout'>PROFILE</button></li>
+            <li><button @click='goAbout'>PROJECTS</button></li>
+            <li><button @click='goAbout'>CONTACT</button></li>
         </ul>
     </div>
 </template>
 
 <script>
+    export default{
+        methods:{
+            goHome(){
+                this.$router.push('/');
+            },
+            goAbout(){
+                this.$router.push('/about');
+            }
+        }
+    }
 </script>
 
 <style scoped>
@@ -19,7 +29,7 @@
     position: relative;
     left: 15px;
     float: left;
-    padding-top: 5px;
+    margin: 0;
     min-width: 100px;
     max-width: 100px;
     min-height: 60px;
@@ -28,22 +38,28 @@
 }
 #navigationlinks{
     display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-top: 5px;
 } 
 #navigationlinks li{
-    margin:6px 30px;
-    margin-top: 20px; /*override, was uneven*/
     float:left;
     list-style:none;
     font-size: inherit;
     font-family: inherit;
     color: inherit;
 } 
-#navigationlinks a{
+
+#navigationlinks button{
+    background: none;
+    border: none;
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color: inherit;
     transition: inherit;
+    padding: 12px 32px;
 }
-#navigationlinks a:hover, #navigationlinks a:active, .current-item a {
+#navigationlinks button:hover, #navigationlinks button:active{
+    background-color: rgba(255, 255, 255, 0.055);
     text-decoration:underline;
     color:#7ed3b4;
 }
