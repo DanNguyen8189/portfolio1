@@ -3,11 +3,11 @@
         <nav class='drop-down-menu' style='background-color: rgba(0,0,0,0.4) !important'>
             <transition name="fade">
                 <ul id = 'navigationlinks' v-if='show'>
-                    <li><button @click='goHome'>HOME</button></li>
-                    <li><button @click='goAbout'>ABOUT</button></li>
-                    <li><button @click='goAbout'>PROFILE</button></li>
-                    <li><button @click='goAbout'>PROJECTS</button></li>
-                    <li><button @click='goAbout'>CONTACT</button></li>
+                    <li v-for='item in menuItems' 
+                        :key = 'item.id'
+                        :class="{ 'active': (item === selected) }">
+                            <button @click = 'selected = item; goTo(item.route)'>{{ item.id }}</button>
+                    </li>
                 </ul>
             </transition>
             <a class='drop-down-symbol' href='#' v-on:click='show = !show'>&#9776;</a>
@@ -36,13 +36,20 @@ export default{
             show: false
         }
     },
-    methods:{
-        goHome(){
-            this.$router.push('/');
+    props:{
+        selected: {
+            type: String,
+            required: true
         },
-        goAbout(){
-            this.$router.push('/about');
-         }
+        menuItems: {
+            type: Array,
+            required: true
+        }
+    },
+    methods:{
+        goTo(routeDirection){
+            this.$router.push(routeDirection);
+        }
     },
     
 }
@@ -90,6 +97,7 @@ export default{
 }
 
 #navigationlinks button{
+    width: 100%;
     background: none;
     border: none;
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
@@ -102,6 +110,12 @@ export default{
     text-decoration:underline;
     color:#7ed3b4;
 }
+button:focus {
+    outline-color:aquamarine;
+}
+.active{
+    color:#7ed3b4 !important;
+}
 .drop-down-symbol {
     display: none;
     padding:20px;
@@ -110,10 +124,14 @@ export default{
     border-radius:3px;
     background:#303030;
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-    color:#777;
+    color:rgb(185, 185, 185);
     font-size:20px;
     transition:color linear 0.15s;
 }
+.drop-down-symbol:hover{
+    color: #7ed3b4;
+}
+
 
 @media screen and (min-width: 860px) {
     .drop-down-menu{

@@ -17,29 +17,34 @@
 </template>
 
 <script>
-    export default{
-        data(){
-            return{
-                selected: 'HOME',
-                menuItems: [{id: 'HOME', route: '/'}, 
-                            {id: 'ABOUT', route: '/about' },   
-                            {id: 'PROFILE', route: '/about'}, 
-                            {id: 'PROJECTS', route: '/about'}, 
-                            {id: 'CONTACT', route: '/about'}]
-            }
+export default{
+    data(){
+        return{
+
+        }
+    },
+    props:{
+        selected: {
+            type: String,
+            required: true
         },
-        methods:{
-            /*goHome(){
-                this.$router.push('/');
-            },
-            goAbout(){
-                this.$router.push('/about');
-            },*/
-            goTo(routeDirection){
-                this.$router.push(routeDirection);
-            }
+        menuItems: {
+            type: Array,
+            required: true
+        },
+    },
+    methods:{
+        /*goHome(){
+            this.$router.push('/');
+        },
+        goAbout(){
+            this.$router.push('/about');
+        },*/
+        goTo(routeDirection){
+            this.$router.push(routeDirection);
         }
     }
+}
 </script>
 
 <style scoped>

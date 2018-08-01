@@ -1,10 +1,24 @@
 <template>
     <div id = 'navigation'>
-        <bar-menu id = 'bar-menu'></bar-menu>
-        <drop-down-menu id = 'drop-down'></drop-down-menu>
+        <bar-menu id = 'bar-menu' :selected = selected :menuItems = menuItems></bar-menu>
+        <drop-down-menu id = 'drop-down' :selected = selected :menuItems = menuItems></drop-down-menu>
     </div>
 </template>
 
+<script>
+export default{
+    data(){
+        return{
+            selected: 'HOME',
+            menuItems: [{id: 'HOME', route: '/'}, 
+                        {id: 'ABOUT', route: '/about' },   
+                        {id: 'PROFILE', route: '/about'}, 
+                        {id: 'PROJECTS', route: '/about'}, 
+                        {id: 'CONTACT', route: '/about'}]
+        }
+    },
+}
+</script>
 <style scoped>
 #navigation{
     text-align: right;
