@@ -2,23 +2,41 @@
     <div>
         <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
         <ul id= 'navigationlinks'>
-            <li><button @click='goHome'>HOME</button></li>
+            <!--<li><button @click='goHome'>HOME</button></li>
             <li><button @click='goAbout'>ABOUT</button></li>
             <li><button @click='goAbout'>PROFILE</button></li>
             <li><button @click='goAbout'>PROJECTS</button></li>
-            <li><button @click='goAbout'>CONTACT</button></li>
+            <li><button @click='goAbout'>CONTACT</button></li>-->
+            <li v-for='item in menuItems' 
+                :key = 'item.id'
+                :class="{ 'active': (item === selected) }">
+                    <button @click = 'selected = item; goTo(item.route)'>{{ item.id }}</button>
+            </li>
         </ul>
     </div>
 </template>
 
 <script>
     export default{
+        data(){
+            return{
+                selected: 'HOME',
+                menuItems: [{id: 'HOME', route: '/'}, 
+                            {id: 'ABOUT', route: '/about' },   
+                            {id: 'PROFILE', route: '/about'}, 
+                            {id: 'PROJECTS', route: '/about'}, 
+                            {id: 'CONTACT', route: '/about'}]
+            }
+        },
         methods:{
-            goHome(){
+            /*goHome(){
                 this.$router.push('/');
             },
             goAbout(){
                 this.$router.push('/about');
+            },*/
+            goTo(routeDirection){
+                this.$router.push(routeDirection);
             }
         }
     }
@@ -62,6 +80,12 @@
     background-color: rgba(255, 255, 255, 0.055);
     text-decoration:underline;
     color:#7ed3b4;
+}
+button:focus {
+    outline-color:aquamarine;
+}
+.active{
+    color:#7ed3b4 !important;
 }
 </style>
 

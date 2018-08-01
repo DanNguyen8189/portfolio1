@@ -19,7 +19,7 @@
 <script>
     var listElements = document.querySelectorAll('li'); 
     var maxWidth = 0;
-    //document.getElementById("navigationlinks").style.backgroundColor = white;
+    //document.getElementById("navigationlinks").style.background = white;
     /*
     for (i = 0; i < listElements.length; ++i) {
         
