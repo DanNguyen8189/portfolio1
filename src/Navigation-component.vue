@@ -14,7 +14,7 @@ export default{
                         {id: 'ABOUT', route: '/about' },   
                         {id: 'PROFILE', route: '/about'}, 
                         {id: 'PROJECTS', route: '/about'}, 
-                        {id: 'CONTACT', route: '/about'}]
+                        {id: 'CONTACT', route: '/contact'}]
         }
     },
 }

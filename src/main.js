@@ -8,6 +8,7 @@ import Banner from './Home-banner'
 import Navigation from './Navigation-component.vue'
 
 import About from './About.vue'
+import Contact from './Contact-page.vue'
 
 Vue.component('bar-menu', BarMenu);
 Vue.component('drop-down-menu', DropDown);
@@ -18,7 +19,8 @@ Vue.use(VueRouter);
 
 const routes = [
     { path: '/', component: Banner },
-    { path: '/about', component: About }
+    { path: '/about', component: About },
+    { path: '/contact', component: Contact }
 ];
 const router = new VueRouter({
     routes: routes,

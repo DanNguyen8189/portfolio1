@@ -17,7 +17,7 @@
 
 #view{
     text-align: center;
-    margin: 8% auto;
+    margin: 4% auto;
 }
 .fade-enter-active,
 .fade-leave-active {
