@@ -1,7 +1,8 @@
 <template>
     <div id = 'homepage'>
         <div id=text>
-            <h1>DAN NGUYEN</h1>
+            <h1 id='first_name'>DAN</h1>
+            <h1 id='last_name'>NGUYEN</h1>
             <h4>Software Engineer, Artist</h4>
         </div>
     </div>
@@ -18,12 +19,18 @@
     display: inline-block;
 }
 #text h1{
-    display: block;
+    display: inline-block;
     font-size: 5em;
     font-family: 'Raleway', sans-serif;
     font-weight: lighter; /*why is this not doing anything*/
-    color: inherit;
     opacity: inherit;
+}
+#first_name{
+    color: inherit;
+    margin-right: 10px;
+}
+#last_name{
+    color: #7ed3b4;
 }
 
 #text h4{

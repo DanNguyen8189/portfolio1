@@ -9,6 +9,9 @@ import Navigation from './Navigation-component.vue'
 
 import About from './About.vue'
 import Contact from './Contact-page.vue'
+import Profile from './Profile-page.vue'
+
+import Education from './Education'
 
 Vue.component('bar-menu', BarMenu);
 Vue.component('drop-down-menu', DropDown);
@@ -20,7 +23,9 @@ Vue.use(VueRouter);
 const routes = [
     { path: '/', component: Banner },
     { path: '/about', component: About },
-    { path: '/contact', component: Contact }
+    { path: '/profile', component: Profile },
+    { path: '/contact', component: Contact },
+    { path: '/profile/education', component: Education }
 ];
 const router = new VueRouter({
     routes: routes,

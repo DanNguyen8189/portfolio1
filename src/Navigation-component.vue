@@ -12,8 +12,7 @@ export default{
             selected: 'HOME',
             menuItems: [{id: 'HOME', route: '/'}, 
                         {id: 'ABOUT', route: '/about' },   
-                        {id: 'PROFILE', route: '/about'}, 
-                        {id: 'PROJECTS', route: '/about'}, 
+                        {id: 'PROFILE', route: '/profile'}, 
                         {id: 'CONTACT', route: '/contact'}]
         }
     },
