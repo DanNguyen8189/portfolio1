@@ -60,7 +60,8 @@ export default{
     margin-right: 1em;
     z-index: 1;
     position:relative;
-}  
+}
+  
 /*#drop-down-menu ul.active { //this was needed for the jquery verison
   display:none;
 }*/
@@ -73,7 +74,7 @@ export default{
     padding:0;
     box-shadow:6px 6px 6px rgba(0,0,0,0.15);
     border-radius:3px;
-    background:#303030;
+    background: rgb(204, 204, 204);
 }
 #navigationlinks:after {
     width:0px;
@@ -85,7 +86,7 @@ export default{
     transform:translate(0%, -100%);
     border-left:7px solid transparent;
     border-right:7px solid transparent;
-    border-bottom:7px solid #303030;
+    border-bottom:7px solid rgb(204, 204, 204);
 }
 #navigationlinks li {
     list-style: none;
@@ -93,9 +94,8 @@ export default{
     display:block;
     font-size: inherit;
     font-family: inherit;
-    color: inherit;
+    color: rgb(110, 110, 110);
 }
-
 #navigationlinks button{
     width: 100%;
     background: none;
@@ -103,18 +103,25 @@ export default{
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color: inherit;
     transition: inherit;
-    padding: 10px 25px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 45px;
+    padding-right: 60px;
+    text-align: left;
 }
 #navigationlinks button:hover, #navigationlinks button:active{
-    background-color: rgba(255, 255, 255, 0.055);
+    background-color: rgb(18, 56, 43);
     text-decoration:underline;
-    color:#7ed3b4;
+    outline: 2px double rgba(126, 211, 180, 0.5);
+    color:#a8dbc8;
 }
 button:focus {
-    outline-color:aquamarine;
+    outline-color:white;
 }
 .active{
-    color:#7ed3b4 !important;
+    color:rgb(22, 66, 45) !important;
+    background-color: rgb(94, 143, 123);
+    font-weight: bold;
 }
 .drop-down-symbol {
     display: none;
@@ -122,14 +129,14 @@ button:focus {
         /*float:left;*/
     box-shadow:0px 1px 1px rgba(0,0,0,0.15);
     border-radius:3px;
-    background:#303030;
+    background: rgb(204, 204, 204);
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color:rgb(185, 185, 185);
     font-size:20px;
     transition:color linear 0.15s;
 }
 .drop-down-symbol:hover{
-    color: #7ed3b4;
+    color: #4e816f;
 }
 
 

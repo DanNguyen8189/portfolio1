@@ -48,11 +48,15 @@ export default{
 </script>
 
 <style scoped>
+div{
+    display: inline-table;
+}
 #signature{
     position: relative;
     left: 15px;
     float: left;
     margin: 0;
+    
     min-width: 100px;
     max-width: 100px;
     min-height: 60px;
@@ -64,9 +68,10 @@ export default{
     padding: 0;
     margin: 0;
     margin-top: 5px;
+    position: relative;
 } 
 #navigationlinks li{
-    float:left;
+    float:left; /*determines order of the links. Floating right does it backwards*/
     list-style:none;
     font-size: inherit;
     font-family: inherit;
@@ -81,9 +86,11 @@ export default{
     transition: inherit;
     padding: 12px 32px;
 }
+
 #navigationlinks button:hover, #navigationlinks button:active{
     background-color: rgba(255, 255, 255, 0.055);
     text-decoration:underline;
+    outline: 2px double rgba(126, 211, 180, 0.5);
     color:#7ed3b4;
 }
 button:focus {

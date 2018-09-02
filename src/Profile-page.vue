@@ -121,8 +121,9 @@ button:hover{
 }*/
 p{
     margin-top: -15px;
-    font-size: 25px;
-    font-family: 'Architects Daughter', sans-serif;
+    font-size: .5em;
+    font-family: 'Amatic SC', cursive;
+    font-weight: 800;
 }
 .fa-graduation-cap{
     color:rgb(68, 71, 255);
@@ -138,7 +139,7 @@ p{
     height: 230px;
     width: 230px;
     padding: 25px;
-    background-color: #bbb;
+    background-color:rgba(255, 255, 255, 0.7);
     border-radius: 50%;
     display: inline-block;
     font-size: 70px;
@@ -147,7 +148,7 @@ p{
     /*border-style: double;
     border-width: 20px;*/
     border-radius: 50%;
-    border: 3px solid #bbb;
+    border: 3px double rgba(255, 255, 255, 0.5);
     background-clip: content-box;
     margin:0 auto;
 }
@@ -157,7 +158,9 @@ p{
 }
 .dot:hover {
     color: #fff;
-    text-shadow: 0 0 10px white;
-    background-color: #888;
+    text-shadow: 0 0 10px rgba(196, 255, 232, 0.8);
+    background-color: rgb(105, 105, 105);
+    border: 3px solid rgba(196, 255, 232, 0.8);
 }
+
 </style>
