@@ -6,10 +6,14 @@
             <li class = 'shift-down'><button class='fa-leaf'><i class="fa fa-leaf"></i><p>Projects</p></button></li>
         </ul>-->
         <ul class = 'profile_buttons'>
-            <li><span class="dot"><div class = 'content'><i class="fa fa-graduation-cap"></i><p>Education</p></div></span></li>
+            <!--<li><span class="dot"><div class = 'content'><i class="fa fa-graduation-cap"></i><p>Education</p></div></span></li>
             <li><span class="dot"><div class = 'content'><i class="fa fa-wrench"></i><p>Skills</p></div></span></li>
-            <li><span class="dot"><div class = 'content'><i class="fa fa-leaf"></i><p>Projects</p></div></span></li>
+            <li><span class="dot"><div class = 'content'><i class="fa fa-leaf"></i><p>Projects</p></div></span></li>-->
+            <li><button class="spin circle"><i class="fa fa-graduation-cap"></i><p>Education</p></button></li>
+            <li><button class="spin circle"><i class="fa fa-wrench"></i><p>Skills</p></button></li>
+            <li><button class="spin circle"><i class="fa fa-leaf"></i><p>Projects</p></button></li>
         </ul>
+        
         <!--<div class="menu-container">
             
             <div class="hex-wrapper">
@@ -135,19 +139,18 @@ p{
     color:rgb(67, 202, 96);
 }
 
+/*
 .dot {
     height: 230px;
     width: 230px;
     padding: 25px;
     background-color:rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
+    border-radius: 100%;
     display: inline-block;
     font-size: 70px;
     text-align: center;
     transition: 0.3s;
-    /*border-style: double;
-    border-width: 20px;*/
-    border-radius: 50%;
+
     border: 3px double rgba(255, 255, 255, 0.5);
     background-clip: content-box;
     margin:0 auto;
@@ -161,6 +164,81 @@ p{
     text-shadow: 0 0 10px rgba(196, 255, 232, 0.8);
     background-color: rgb(105, 105, 105);
     border: 3px solid rgba(196, 255, 232, 0.8);
+}*/
+
+
+button {
+  /*background: none;
+  border: 3px double rgba(255, 255, 255, 0.5);
+  box-sizing: border-box;
+  margin: 1em;
+  padding: 1em 2em;
+  box-shadow: inset 0 0 0 2px #f45e61;
+  color: #f45e61;
+  font-size: inherit;
+  font-weight: 700;
+  position: relative;
+  vertical-align: middle;*/
+    box-sizing: border-box;
+    background-color:rgba(255, 255, 255, 0.7);
+    border-radius: 100%;
+    display: inline-block;
+    font-size: 70px;
+    text-align: center;
+    transition: 0.3s;
+    /*border-style: double;
+    border-width: 20px;*/
+    border: 3px double rgba(255, 255, 255, 0.5);
+    background-clip: content-box;
+    margin:0 auto;
+}
+button::before, button::after {
+    box-sizing: inherit;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
+.spin {
+    width: 230px;
+    height: 230px;
+    padding: 25px;;
+}
+.spin:hover {
+    color: #6fffc8;
+    text-shadow: 0 0 10px rgba(196, 255, 232, 0.8);
+    background-color: rgb(105, 105, 105);
+}
+.spin::before, .spin::after {
+    top: 0;
+    left: 0;
+}
+.spin::before {
+    border: 2px solid transparent;
+}
+.spin:hover::before {
+    border-top-color: #6fffc8;
+    border-right-color: #6fffc8;
+    border-bottom-color: #6fffc8;
+    transition: border-top-color 0.15s linear, border-right-color 0.15s linear 0.1s, border-bottom-color 0.15s linear 0.2s;
+}
+.spin::after {
+    border: 0 solid transparent;
+}
+.spin:hover::after {
+    border-top: 4px solid #6fffc8;
+    border-left-width: 0px;
+    border-right-width: 4px;
+    transform: rotate(270deg);
+    transition: transform 0.4s linear 0s, border-left-width 0s linear 0.35s;
+}
+
+.circle {
+    border-radius: 100%;
+    box-shadow: none;
+}
+.circle::before, .circle::after {
+    border-radius: 100%;
+}
 </style>
