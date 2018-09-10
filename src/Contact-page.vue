@@ -14,6 +14,13 @@
             <p id = 'number'>(000) 000-0000</p>
         </div>-->
 
+        <ul class=social_media>
+            <li id='linkedin'><a href='https://www.linkedin.com/in/dannguyen8189/' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
+            <li id='github'><a href='https://github.com/DanNguyen8189' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
+            <li id='instagram'><a href=# target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
+            <li id='twitter'><a href=# target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
+        </ul>
+
         <!--Contact form-->
         <form class="vue-form" @submit.prevent="submit">
             <legend>Feel free to drop a line</legend>
@@ -52,16 +59,11 @@
         </form>
 
         <!--window for debugging purposes-->
-        <div class="debug">
+        <!--<div class="debug">
             <pre><code>{{ $data }}</code></pre>
-        </div>
+        </div>-->
 
-        <ul class=social_media>
-            <li id='linkedin'><a href='https://www.linkedin.com/in/dannguyen8189/' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
-            <li id='github'><a href='https://github.com/DanNguyen8189' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
-            <li id='instagram'><a href=# target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
-            <li id='twitter'><a href=# target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
-        </ul>
+        
         </div>
         <center>
         <hr/>
@@ -133,12 +135,12 @@ hr {
     margin: 1em 0;
     padding: 0;
 }
-#wrapper{
+/*#wrapper{
     background: rgba(0, 0, 0, 0.5);
     padding: 20px 20px;
     margin: 0 5%;
     border-radius: 5px;
-}
+}*/
 p{
     color: rgba(255, 255, 255, 0.9);
     font-size: 18px;
@@ -173,7 +175,6 @@ p{
     display: block;
     position: relative;
     margin: auto; 
-    margin-top: 50px;
     /*margin-left: -29px;*/
     right: 20px;
     color: black;
