@@ -3,6 +3,7 @@
         <nav class='drop-down-menu' style='background-color: rgba(0,0,0,0.4) !important'>
             <transition name="fade">
                 <ul id = 'navigationlinks' v-if='show'>
+                    <!--create a button for each item in menuItems, which was passed down from Navigation-component-->
                     <li v-for='item in menuItems' 
                         :key = 'item.id'
                         :class="{ 'active': (item === selected) }">
@@ -17,25 +18,13 @@
 
 <!--Script to toggle appearance and dissappearance of drop down menu-->
 <script>
-    var listElements = document.querySelectorAll('li'); 
-    var maxWidth = 0;
-    //document.getElementById("navigationlinks").style.background = white;
-    /*
-    for (i = 0; i < listElements.length; ++i) {
-        
-    };
-    
-    // write
-    for (i = 0; i < listElements.length; ++i) {
-        listElements[i].style.width = maxWidth + "px";
-    };*/
-
 export default{
     data() {
         return{
             show: false
         }
     },
+    /*data expected to be passed down from parent component (Navigation-component)*/
     props:{
         selected: {
             type: String,
@@ -61,10 +50,6 @@ export default{
     z-index: 1;
     position:relative;
 }
-  
-/*#drop-down-menu ul.active { //this was needed for the jquery verison
-  display:none;
-}*/
 #navigationlinks {
     display: block;
     text-align: left;
@@ -118,6 +103,7 @@ export default{
 button:focus {
     outline-color:white;
 }
+/*selected button styling*/
 .active{
     color:rgb(22, 66, 45) !important;
     background-color: rgb(94, 143, 123);
@@ -139,7 +125,7 @@ button:focus {
     color: #4e816f;
 }
 
-
+/*Cases of different screen sizes*/
 @media screen and (min-width: 860px) {
     .drop-down-menu{
         display: none;

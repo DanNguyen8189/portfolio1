@@ -2,11 +2,7 @@
     <div>
         <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
         <ul id= 'navigationlinks'>
-            <!--<li><button @click='goHome'>HOME</button></li>
-            <li><button @click='goAbout'>ABOUT</button></li>
-            <li><button @click='goAbout'>PROFILE</button></li>
-            <li><button @click='goAbout'>PROJECTS</button></li>
-            <li><button @click='goAbout'>CONTACT</button></li>-->
+            <!--create a button for each item in menuItems, which was passed down from Navigation-component-->
             <li v-for='item in menuItems' 
                 :key = 'item.id'
                 :class="{ 'active': (item === selected) }">
@@ -20,9 +16,9 @@
 export default{
     data(){
         return{
-
         }
     },
+    /*data expected from parent component (Navigation-component)*/ 
     props:{
         selected: {
             type: String,
@@ -56,7 +52,6 @@ div{
     left: 15px;
     float: left;
     margin: 0;
-    
     min-width: 100px;
     max-width: 100px;
     min-height: 60px;

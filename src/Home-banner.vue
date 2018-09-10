@@ -22,7 +22,6 @@
     display: inline-block;
     font-size: 5em;
     font-family: 'Raleway', sans-serif;
-    font-weight: lighter; /*why is this not doing anything*/
     opacity: inherit;
 }
 #first_name{

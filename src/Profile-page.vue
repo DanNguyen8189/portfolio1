@@ -1,51 +1,11 @@
 <template>
     <div>
-        <!--<ul class = 'profile_buttons'>
-            <li class = 'shift-down'><button class='fa-graduation-cap' @click='goEducation()'><i class="fa fa-graduation-cap"></i><p>Education</p></button></li>
-            <li><button class='fa-wrench'><i class="fa fa-wrench"></i><p>Skills</p></button></li>
-            <li class = 'shift-down'><button class='fa-leaf'><i class="fa fa-leaf"></i><p>Projects</p></button></li>
-        </ul>-->
         <ul class = 'profile_buttons'>
-            <!--<li><span class="dot"><div class = 'content'><i class="fa fa-graduation-cap"></i><p>Education</p></div></span></li>
-            <li><span class="dot"><div class = 'content'><i class="fa fa-wrench"></i><p>Skills</p></div></span></li>
-            <li><span class="dot"><div class = 'content'><i class="fa fa-leaf"></i><p>Projects</p></div></span></li>-->
-            <li><button class="spin circle"><i class="fa fa-graduation-cap"></i><p>Education</p></button></li>
-            <li><button class="spin circle"><i class="fa fa-wrench"></i><p>Skills</p></button></li>
-            <li><button class="spin circle"><i class="fa fa-leaf"></i><p>Projects</p></button></li>
+            <li><button class="spin circle" @click = 'goEducation()'><i class="fa fa-graduation-cap"></i><p>Education</p></button></li>
+            <li><button class="spin circle" @click = 'selected = item; goTo(item.route)'><i class="fa fa-wrench"></i><p>Skills</p></button></li>
+            <li><button class="spin circle" @click = 'selected = item; goTo(item.route)'><i class="fa fa-leaf"></i><p>Projects</p></button></li>
         </ul>
-        
-        <!--<div class="menu-container">
-            
-            <div class="hex-wrapper">
-                <div class="hex-row shift">
-                <div class="hexagon" id="nav-home">
-                    <i class="fa fa-graduation-cap"></i>
-                    <p>Education</p>
-                    <div class="face1"></div>
-                    <div class="face2"></div>
-                </div>
-                </div>
-                <div class="hex-row">
-                <div class="hexagon" id="nav-about">
-                    Skills
-                    <div class="face1"></div>
-                    <div class="face2"></div>
-                </div>
-                <div class="hexagon" id="nav-work">
-                    Projects
-                    <div class="face1"></div>
-                    <div class="face2"></div>
-                </div>
-                </div>
-                <div class="hex-row shift">
-                <div class="hexagon" id="nav-contact">
-                    
-                    <div class="face1"></div>
-                    <div class="face2"></div>
-                </div>
-                </div>
-            </div>
-            </div>-->
+
     </div>
     
 </template>
@@ -54,6 +14,7 @@
 export default{
     data(){
         return{
+            /*Not currently in use*/
             profileItems:[{id: Education, route: '/profile/education'},
                           {id: Skills, route: '/profile/skills'},
                           {id: Projects, route: '/profile/projects'}]
@@ -82,53 +43,15 @@ li{
     position: relative;
     margin: 35px 30px;
 }
-.shift-down{
-    top: 90px;
-}
-/*button{
-    border: none;
-    width: 210px;
-    height: 120px;
-    background-color: #ccc;
-    display: block;
-    text-align: center;
-    line-height: 32px;
-    font-size: 70px;
-    transition: 0.5s;
-}
-button::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    transform: rotate(60deg);
-}
-button::after{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: inherit;
-    z-index: -1;
-    transform: rotate(-60deg);
-}
-button:hover{
-  color: #fff;
-  text-shadow: 0 0 10px white;
-  background-color: #888;
-}*/
+
 p{
     margin-top: -15px;
     font-size: .5em;
     font-family: 'Amatic SC', cursive;
     font-weight: 800;
 }
+
+/*Button image styling*/
 .fa-graduation-cap{
     color:rgb(68, 71, 255);
 }
@@ -139,47 +62,9 @@ p{
     color:rgb(67, 202, 96);
 }
 
-/*
-.dot {
-    height: 230px;
-    width: 230px;
-    padding: 25px;
-    background-color:rgba(255, 255, 255, 0.7);
-    border-radius: 100%;
-    display: inline-block;
-    font-size: 70px;
-    text-align: center;
-    transition: 0.3s;
-
-    border: 3px double rgba(255, 255, 255, 0.5);
-    background-clip: content-box;
-    margin:0 auto;
-}
-.content{
-    width: 100%;
-    margin: 20px auto;
-}
-.dot:hover {
-    color: #fff;
-    text-shadow: 0 0 10px rgba(196, 255, 232, 0.8);
-    background-color: rgb(105, 105, 105);
-    border: 3px solid rgba(196, 255, 232, 0.8);
-}*/
-
-
 button {
-  /*background: none;
-  border: 3px double rgba(255, 255, 255, 0.5);
-  box-sizing: border-box;
-  margin: 1em;
-  padding: 1em 2em;
-  box-shadow: inset 0 0 0 2px #f45e61;
-  color: #f45e61;
-  font-size: inherit;
-  font-weight: 700;
-  position: relative;
-  vertical-align: middle;*/
-    box-sizing: border-box;
+    box-sizing: border-box; /*The width and height properties (and min/max properties) 
+                            includes content, padding and border*/
     background-color:rgba(255, 255, 255, 0.7);
     border-radius: 100%;
     display: inline-block;
@@ -189,7 +74,7 @@ button {
     /*border-style: double;
     border-width: 20px;*/
     border: 3px double rgba(255, 255, 255, 0.5);
-    background-clip: content-box;
+    background-clip: content-box; /*clips the background at the edge of the content box*/
     margin:0 auto;
 }
 button::before, button::after {
@@ -199,7 +84,11 @@ button::before, button::after {
     width: 100%;
     height: 100%;
 }
-
+/*On click animation, may change later*/
+button:active{
+    transition: rotate(25deg);
+    transition-duration: .4s;
+}
 .spin {
     width: 230px;
     height: 230px;
@@ -240,5 +129,19 @@ button::before, button::after {
 }
 .circle::before, .circle::after {
     border-radius: 100%;
+}
+
+/*Strangely overrides the router animations set in App.vue*/
+.fade-enter-active,
+.fade-leave-active {
+    transition-duration: 0.7s;
+    transition-property: opacity, transform;
+    transition-timing-function: ease;
+}
+
+.fade-enter,
+.fade-leave-active {
+    opacity: 0;
+    transform: scale(1.5);
 }
 </style>

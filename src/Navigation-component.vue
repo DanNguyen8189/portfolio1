@@ -8,8 +8,11 @@
 <script>
 export default{
     data(){
+        /*We're passing this data down to the bar menu and drop-down menu*/
         return{
+            /*For styling the active button*/
             selected: 'HOME',
+            /*Array of menu items to be rendered*/
             menuItems: [{id: 'HOME', route: '/'}, 
                         {id: 'ABOUT', route: '/about' },   
                         {id: 'PROFILE', route: '/profile'}, 
@@ -36,7 +39,7 @@ export default{
 }
 @media screen and (max-width: 860px) {
     #bar-menu{
-        display: none
+        display: none;
     }
 }
 </style>
