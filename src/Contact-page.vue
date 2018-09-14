@@ -18,7 +18,7 @@
             <li id='linkedin'><a href='https://www.linkedin.com/in/dannguyen8189/' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
             <li id='github'><a href='https://github.com/DanNguyen8189' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
             <li id='instagram'><a href=# target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
-            <li id='twitter'><a href=# target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
+            <li id='twitter'><a href='https://twitter.com/Danimalspirit' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
         </ul>
 
         <!--Contact form-->
@@ -30,6 +30,7 @@
             </div>
 
             <fieldset>
+                <!--The v-model lines allow us to bind the input to our data-->
             <div>
                 <label class="label" for="name">Name</label>
                 <input type="text" name="name" id="name" required="" 
@@ -70,11 +71,33 @@
         </center>
     </div>
 </template>
-
+<script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
 <script>
 //email validation variable. Entered email is compared to this in isEmail() method
 var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
+
+import Firebase from 'firebase'
+let config = {
+    apiKey: "AIzaSyA04kwfliKMcqxBahjQlr141fsVWyJv71Y",
+    authDomain: "contactform-97a0f.firebaseapp.com",
+    databaseURL: "https://contactform-97a0f.firebaseio.com",
+    projectId: "contactform-97a0f",
+    storageBucket: "contactform-97a0f.appspot.com",
+    messagingSenderId: "653555542841"
+};
+
+//connect to firebase
+let contactPage = Firebase.initializeApp(config);
+let db = contactPage.database();
+let messagesRef = db.ref('messages'); //acess to messages node in firebase
+
+
 export default{
+    name: 'contact',
+    /*firebase properties*/
+    firebase:{
+        messages: messagesRef
+    },
     data() {
         return {
             //default data
@@ -94,6 +117,7 @@ export default{
         // submit form handler
         submit: function() {
             this.submitted = true;
+            this.addMessage();
         },
         // validate by type and value
         validate: function(type, value) {
@@ -105,7 +129,29 @@ export default{
         isEmail: function(value) {
             return emailRegExp.test(value);
         },
-
+        addMessage: function(){
+            /*var newMessage = messagesRef.push();
+            newMessage.set(
+                {
+                    name: this.data.name,
+                    email: this.data.email.value,
+                    message: this.data.message.text
+                }
+            );*/
+            /*var newMessage;
+            newMessage.set(
+                {
+                    name: this.data.name,
+                    email: this.data.email.value,
+                    message: this.data.message.text
+                }
+            );*/
+            messagesRef.push({
+                name: this.name,
+                email: this.email.value,
+                text: this.message.text
+            });
+        },
     },
     //continously watches the email field to confirm validity
     watch: {

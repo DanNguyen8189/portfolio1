@@ -1,9 +1,9 @@
 <template>
     <div>
         <ul class = 'profile_buttons'>
-            <li><button class="spin circle" @click = 'goEducation()'><i class="fa fa-graduation-cap"></i><p>Education</p></button></li>
             <li><button class="spin circle" @click = 'selected = item; goTo(item.route)'><i class="fa fa-wrench"></i><p>Skills</p></button></li>
             <li><button class="spin circle" @click = 'selected = item; goTo(item.route)'><i class="fa fa-leaf"></i><p>Projects</p></button></li>
+            <li><button class="spin circle" @click = 'goEducation()'><i class="fa fa-bicycle"></i><p>Activities</p></button></li>
         </ul>
 
     </div>
@@ -52,7 +52,7 @@ p{
 }
 
 /*Button image styling*/
-.fa-graduation-cap{
+.fa-bicycle{
     color:rgb(68, 71, 255);
 }
 .fa-wrench{

@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import VueFire from 'vuefire'
 
 /*Vue file imports*/
 import App from './App.vue'
@@ -21,8 +22,9 @@ Vue.component('drop-down-menu', DropDown);
 Vue.component('image-credit', ImageCredit);
 Vue.component('navigation-component', Navigation);
 
-/*Allow us usage of vue router*/
-Vue.use(VueRouter);
+/*Allow us usage of vue router and firebase*/
+Vue.use(VueRouter, VueFire);
+
 
 /*Routing paths*/
 const routes = [
