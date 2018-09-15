@@ -77,8 +77,9 @@
 var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 import Firebase from 'firebase'
+import apiConfig from 'C:/Users/DanXa/Documents/apiKeys';
 let config = {
-    apiKey: "AIzaSyA04kwfliKMcqxBahjQlr141fsVWyJv71Y",
+    apiKey: `${apiConfig.myKey}`,
     authDomain: "contactform-97a0f.firebaseapp.com",
     databaseURL: "https://contactform-97a0f.firebaseio.com",
     projectId: "contactform-97a0f",
