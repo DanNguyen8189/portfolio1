@@ -18,3 +18,23 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+## Firebase setup
+```
+details at https://medium.com/@markgoho/create-a-contact-form-in-angular-using-cloud-functions-for-firebase-5e390bdf5600
+# install Firebase just inside project directory
+npm install -g firebase-tools
+
+# initialize project
+firebase init
+
+# install nodemailer inside functions folder
+npm install nodemailer
+
+# configure source email address
+firebase functions:config:set gmail.email="myusername@gmail.com" gmail.password="secretpassword"
+
+# cloud functions go in index.js 
+# once updated, deploy to firebase with 
+firebase deploy --only functions
+```
