@@ -26,6 +26,7 @@ exports.sendContactMessage2 = functions.database.ref('/messages/{pushKey}')
   const original = snapshot.val();
   
   const mailOptions = {
+    from: 'danxar@gmail.com',
     to: 'dannguyen8189@gmail.com',
     /*subject: `Information Request from ${val.author} at ${val.title}`,
     text: val.url,*/

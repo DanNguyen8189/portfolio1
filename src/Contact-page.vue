@@ -26,7 +26,8 @@
             <legend>Feel free to drop a line</legend>
             <div class="error-message">
                 <!--Conditional rendering-->
-                <p v-show="!email.valid">Oh, please enter a valid email address.</p>
+                <p v-show="!email.valid && !submitted" class='red'>Please enter a valid email address.</p>
+                <p v-show="submitted" class='green'>Thank you!</p>
             </div>
 
             <fieldset>
@@ -111,7 +112,7 @@ export default{
                 text: ``,
                 maxlength: 255
             },
-            submitted: false
+            submitted: false,
         };
     },    
     methods: {
@@ -119,6 +120,9 @@ export default{
         submit: function() {
             this.submitted = true;
             this.addMessage();
+            this.name = ''
+            this.email.value = ''
+            this.message.text = ''
         },
         // validate by type and value
         validate: function(type, value) {
@@ -475,7 +479,7 @@ header h1 {
     margin: 0px;
 }
 .vue-form .error-message p {
-    background: #a03527;
+    /*background: #a03527;*/
     color: #ffffff;
     font-size: 1.4rem;
     text-align: center;
@@ -494,6 +498,12 @@ header h1 {
     top: 0px;
     font-size: 10px;
     padding: 4px;
+}
+.vue-form .red{
+    background-color: #a03527;
+}
+.vue-form .green{
+    background-color: rgb(0, 128, 58);
 }
 
 /*debugging window*/
