@@ -4,17 +4,17 @@ import VueFire from 'vuefire'
 
 /*Vue file imports*/
 import App from './App.vue'
-import BarMenu from './BarMenu'
-import DropDown from './DropDownMenu'
+import BarMenu from './BarMenu.vue'
+import DropDown from './DropDownMenu.vue'
 import ImageCredit from './ImageCredit'
-import Banner from './Home-banner'
 import Navigation from './Navigation-component.vue'
 
-import About from './About.vue'
-import Contact from './Contact-page.vue'
-import Profile from './Profile-page.vue'
+import Home from './mainMenuPages/Home-banner.vue'
+import About from './mainMenuPages/About.vue'
+import Contact from './mainMenuPages/Contact-page.vue'
+import Profile from './mainMenuPages/Profile-page.vue'
 
-import Education from './Education'
+import Activites from './profilePageItems/Activities.vue'
 
 /*These reusable components are referenced in html sections like: <bar-menu></bar-menu>*/
 Vue.component('bar-menu', BarMenu);
@@ -28,11 +28,11 @@ Vue.use(VueRouter, VueFire);
 
 /*Routing paths*/
 const routes = [
-    { path: '/', component: Banner },
+    { path: '/', component: Home },
     { path: '/about', component: About },
     { path: '/profile', component: Profile },
     { path: '/contact', component: Contact },
-    { path: '/profile/education', component: Education }
+    { path: '/profile/activites', component: Activites }
 ];
 const router = new VueRouter({
     routes: routes,

@@ -22,7 +22,7 @@ export default{
     },
     methods:{
         goEducation(){
-            this.$router.push('/profile/education');
+            this.$router.push('/profile/activites');
         }
     }
 }
