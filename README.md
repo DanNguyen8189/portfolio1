@@ -1,6 +1,6 @@
 # personal-website
 
-Note: not yet ready to run on github pages
+Live website at: https://dannguyencodes.firebaseapp.com
 
 > A Vue.js project
 
@@ -37,4 +37,7 @@ firebase functions:config:set gmail.email="myusername@gmail.com" gmail.password=
 # cloud functions go in index.js 
 # once updated, deploy to firebase with 
 firebase deploy --only functions
+
+# deploy website using firebase hosting
+https://medium.com/@ShayneOSullivan/deploy-a-vue-js-app-with-firebase-hosting-3fc420cf3998
 ```

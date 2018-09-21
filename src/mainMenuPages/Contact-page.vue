@@ -81,11 +81,11 @@ import Firebase from 'firebase'
 import apiConfig from 'C:/Users/DanXa/Documents/apiKeys';
 let config = {
     apiKey: `${apiConfig.myKey}`,
-    authDomain: "contactform-97a0f.firebaseapp.com",
-    databaseURL: "https://contactform-97a0f.firebaseio.com",
-    projectId: "contactform-97a0f",
-    storageBucket: "contactform-97a0f.appspot.com",
-    messagingSenderId: "653555542841"
+    authDomain: `${apiConfig.myDomain}`,
+    databaseURL: `${apiConfig.myDatabaseURL}`,
+    projectId: `${apiConfig.myProjectId}`,
+    storageBucket: `${apiConfig.myStorageBucket}`,
+    messagingSenderId: `${apiConfig.myMessengingSenderId}`
 };
 
 //connect to firebase
