@@ -1,6 +1,6 @@
 import Vue from 'vue'
-import VueRouter from 'vue-router'
-import VueFire from 'vuefire'
+import VueRouter from 'vue-router' //for routing
+import VueFire from 'vuefire' //for vue and firebase integration
 
 /*Vue file imports*/
 import App from './App.vue'
@@ -8,6 +8,7 @@ import BarMenu from './BarMenu.vue'
 import DropDown from './DropDownMenu.vue'
 import ImageCredit from './ImageCredit'
 import Navigation from './Navigation-component.vue'
+import BackButton from './profilePageItems/Back-button.vue'
 
 import Home from './mainMenuPages/Home-banner.vue'
 import About from './mainMenuPages/About.vue'
@@ -15,16 +16,18 @@ import Contact from './mainMenuPages/Contact-page.vue'
 import Profile from './mainMenuPages/Profile-page.vue'
 
 import Activites from './profilePageItems/Activities.vue'
+import Projects from './profilePageItems/Projects.vue'
+import Skills from './profilePageItems/Skills.vue'
 
 /*These reusable components are referenced in html sections like: <bar-menu></bar-menu>*/
-Vue.component('bar-menu', BarMenu);
-Vue.component('drop-down-menu', DropDown);
-Vue.component('image-credit', ImageCredit);
-Vue.component('navigation-component', Navigation);
+Vue.component('bar-menu', BarMenu)
+Vue.component('drop-down-menu', DropDown)
+Vue.component('image-credit', ImageCredit)
+Vue.component('navigation-component', Navigation)
+Vue.component('back-button', BackButton)
 
 /*Allow us usage of vue router and firebase*/
-Vue.use(VueRouter, VueFire);
-
+Vue.use(VueRouter, VueFire)
 
 /*Routing paths*/
 const routes = [
@@ -32,7 +35,9 @@ const routes = [
     { path: '/about', component: About },
     { path: '/profile', component: Profile },
     { path: '/contact', component: Contact },
-    { path: '/profile/activites', component: Activites }
+    { path: '/profile/activites', component: Activites },
+    { path: '/profile/skills', component: Skills },
+    { path: '/profile/projects', component: Projects }
 ];
 const router = new VueRouter({
     routes: routes,

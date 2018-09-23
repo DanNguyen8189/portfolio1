@@ -4,8 +4,8 @@
         <back-button></back-button>
     </div>
 </template>
-<script>
 
+<script>
 </script>
 
 <style scoped>

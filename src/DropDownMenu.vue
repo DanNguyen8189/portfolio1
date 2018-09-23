@@ -1,3 +1,4 @@
+/*template for expandable menu that appears on smaller screens*/
 <template>
     <div>
         <nav class='drop-down-menu' style='background-color: rgba(0,0,0,0.4) !important'>

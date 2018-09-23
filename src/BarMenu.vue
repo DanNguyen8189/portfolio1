@@ -1,3 +1,4 @@
+/*Template for menu across the top*/
 <template>
     <div>
         <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
