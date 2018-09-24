@@ -1,7 +1,7 @@
 <template>
     <div>
+        <back-button id='back-button'></back-button>
         <h1>Page under construction</h1>
-        <back-button></back-button>
     </div>
 </template>
 <script>
@@ -9,6 +9,11 @@
 </script>
 
 <style scoped>
+div{
+    width: 100%;
+    height: 100%;
+}
+
 h1{
     color: rgba(255, 255, 255, 0.7)
 }

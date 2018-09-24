@@ -45,11 +45,7 @@ export default{
 </script>
 
 <style scoped>
-div{
-    display: inline-table;
-}
 #signature{
-    position: relative;
     left: 15px;
     float: left;
     margin: 0;
@@ -64,7 +60,6 @@ div{
     padding: 0;
     margin: 0;
     margin-top: 5px;
-    position: relative;
 } 
 #navigationlinks li{
     float:left; /*determines order of the links. Floating right does it backwards*/

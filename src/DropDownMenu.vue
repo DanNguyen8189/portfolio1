@@ -54,7 +54,7 @@ export default{
 #navigationlinks {
     display: block;
     text-align: left;
-    position:absolute;
+    position: absolute; /*keeps the drop down button in place*/
     top:120%;
     right: 0; /*forces the menu positioning to expand from right side*/
     padding:0;
@@ -65,7 +65,7 @@ export default{
 #navigationlinks:after {
     width:0px;
     height:0px;
-    position:absolute;
+    position: absolute;
     top:0%;
     right: 21px;
     content:'';

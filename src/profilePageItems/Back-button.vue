@@ -1,7 +1,7 @@
 /*Back button template*/
 <template>
 <div>
-    <button @click = 'goBack()' >Back</button>
+    <button @click = 'goBack()' ><i class="fa fa-arrow-left"></i></button>
 </div>
 </template>
 
@@ -14,3 +14,18 @@ export default{
     }
 }
 </script>
+<style scoped>
+div{
+    margin-left: 50px;
+    /*width:max-content;*/ /*makes it so that the width of the parent div is at most the width of its contents. 
+    note: apparently doesn't work on ie or edge*/
+}
+button{
+    background-color: #00806b8a;
+    color: rgb(77, 255, 196);
+    border-radius: 50%;
+    font-size: 30px;
+    display: block; /*for whatever reason these 2 lines allow the button to go all the way left.*/
+    overflow: auto;
+}
+</style>

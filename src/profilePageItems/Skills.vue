@@ -1,7 +1,7 @@
 <template>
     <div>
-        <h1>Page under construction</h1>
         <back-button></back-button>
+        <h1>Page under construction</h1>
     </div>
 </template>
 
