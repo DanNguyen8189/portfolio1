@@ -37,9 +37,8 @@ export default{
 <style scoped>
 ul{
     display: block;
-    position: relative;
-    margin: auto; 
-    margin-top: 50px;
+    position: relative; 
+    margin: 50px auto;
     /*margin-left: -29px;*/
     right: 20px;
 }
@@ -47,7 +46,7 @@ li{
     display: inline-block;
     list-style: none;
     position: relative;
-    margin: 35px 30px;
+    margin: 15px 30px;
 }
 
 p{
@@ -98,7 +97,30 @@ button:active{
 .spin {
     width: 230px;
     height: 230px;
-    padding: 25px;;
+    padding: 25px;
+}
+@media screen and (max-width: 700px){
+    .spin{
+        width: 150px;
+        height:150px;
+        padding: 15px;
+    }
+    button{
+        font-size: 50px;
+    }
+}
+@media screen and (max-width: 470px){
+    li{
+        margin: 7.5px 15px;
+    }
+    .spin{
+        width: 100px;
+        height: 100px;
+        padding: 10px;
+    }
+    button{
+        font-size: 40px;
+    }
 }
 .spin:hover {
     color: #6fffc8;

@@ -30,14 +30,14 @@ export default{
     background-color: rgba(0,0,0,0.05);
     transition: color linear 0.15s;
 }
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 700px) {
     #bar-menu {
         width:100%;
         box-shadow:0px 1px 1px rgba(255, 255, 255, 0.30);
         border-radius:3px;
     }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 700px) {
     #bar-menu{
         display: none;
     }

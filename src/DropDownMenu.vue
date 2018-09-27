@@ -127,7 +127,7 @@ button:focus {
 }
 
 /*Cases of different screen sizes*/
-@media screen and (min-width: 860px) {
+@media screen and (min-width: 7000px) {
     .drop-down-menu{
         display: none;
     }
@@ -135,7 +135,7 @@ button:focus {
         display: none;
     }
 }
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 700px) {
     .drop-down-menu{
         display: inline-block;
     }

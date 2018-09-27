@@ -183,7 +183,7 @@ hr {
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0));
-    margin: 1em 0;
+    margin: 0;
     padding: 0;
 }
 /*#wrapper{
@@ -212,7 +212,7 @@ p{
 }
 @media only screen and (max-width: 510px){
     h1{
-        font-size: 40px;
+        font-size: 35px;
     }
     p{
         font-size: 12px;
@@ -225,9 +225,8 @@ p{
     transform: translate(-50%, -50%); */
     display: block;
     position: relative;
-    margin: auto; 
-    /*margin-left: -29px;*/
-    right: 20px;
+    margin: 10px auto; 
+    margin-left: -30px; /*TODO can't leave this here*/
     color: black;
 }
 
@@ -315,7 +314,7 @@ p{
 @media only screen and (max-width: 510px) {
 
     .social_media li{
-        margin: 26.25px 15px;
+        margin: 7% 3%;
     }
     .social_media li a{
         width: 52.5px;
@@ -325,65 +324,20 @@ p{
     }
 }
 
-/**,
-*::after,
-*::before {
-    box-sizing: border-box;
-}
-
-body {
-    color: #fff;
-    background: #949c4e;
-    background: linear-gradient(
-        115deg,
-        rgba(86, 216, 228, 1) 10%,
-        rgba(159, 1, 234, 1) 90%
-    );
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial,
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-html,
-body,
-.container {
-    min-height: 100vh;
-}
-
-.center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-a {
-    color: #2c3e50;
-    text-decoration: none;
-}
-
-header {
-    position: relative;
-    height: 0px;
-    padding-top: 100px;
-}
-
-header h1 {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 300;
-}*/
-
 .vue-form {
     font-size: 16px;
     width: 500px;
     padding: 15px 30px;
     border-radius: 4px;
-    margin: 25px auto;
+    margin: 0 auto 25px;
     width: 500px;
     background-color: rgb(127, 182, 148);
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
+}
+@media screen and (max-width: 500px){
+    .vue-form{
+        width: 96%
+    }
 }
 .vue-form fieldset {
     margin: 0 0 0 0;
@@ -392,6 +346,11 @@ header h1 {
     padding-bottom: 10px;
     border-bottom: 1px solid #ecf0f1;
     font-family: 'Architects Daughter', sans-serif;
+}
+@media screen and (max-width: 500px){
+    .vue-form legend{
+        font-size: 15px;
+    } 
 }
 .vue-form div {
     position: relative;
@@ -553,5 +512,7 @@ header h1 {
         transform: scale(0.8);
     }
 }
+
+
 </style>
 
