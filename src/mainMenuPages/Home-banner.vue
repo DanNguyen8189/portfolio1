@@ -13,10 +13,11 @@
 
 <style scoped>
 #text{
-    margin: 0 35px;
+    margin: 4% auto;
     color: white;
     opacity: 0.9;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 #text h1{
     display: inline-block;

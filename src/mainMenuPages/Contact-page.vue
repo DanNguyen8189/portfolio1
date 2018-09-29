@@ -1,9 +1,9 @@
 <template>
     <div id = 'contact'>
-        <h1>Get in touch with me!</h1>
-        <center>
+        <h1>Get in touch!</h1>
+        <!--<center>
         <hr/>
-        </center>
+        </center>-->
         <div id = 'wrapper'>
         <!--<div class = 'contact_info'>
             <i id = 'envelope' class="fa fa-envelope" aria-hidden="true"></i>
@@ -67,9 +67,9 @@
 
         
         </div>
-        <center>
+        <!--<center>
         <hr/>
-        </center>
+        </center>-->
     </div>
 </template>
 <script src="https://www.gstatic.com/firebasejs/5.4.2/firebase.js"></script>
@@ -168,14 +168,17 @@ export default{
 </script>
 
 <style scoped>
-#contact{
-    height: 100%;
-    width: 100%;
-}
 h1{
     color: rgba(183, 255, 219, 0.863);
     font-size: 50px;
-    font-family: 'Open Sans Condensed', sans-serif;
+    font-family: 'Dosis', sans-serif;
+    display: block;
+    text-align: center;
+}
+@media screen and (max-width: 510px){
+    h1{
+        margin: auto; /*shoft closer to top*/
+    }
 }
 hr {
     width: 90%;
@@ -224,9 +227,10 @@ p{
     left: 50%;
     transform: translate(-50%, -50%); */
     display: block;
+    text-align: center;
+    padding: 0; /*needed to correectly center*/
     position: relative;
     margin: 10px auto; 
-    margin-left: -30px; /*TODO can't leave this here*/
     color: black;
 }
 
@@ -312,7 +316,6 @@ p{
 
 
 @media only screen and (max-width: 510px) {
-
     .social_media li{
         margin: 7% 3%;
     }
@@ -336,7 +339,8 @@ p{
 }
 @media screen and (max-width: 500px){
     .vue-form{
-        width: 96%
+        width: 96%;
+        padding: 10px 25px;
     }
 }
 .vue-form fieldset {
@@ -355,6 +359,11 @@ p{
 .vue-form div {
     position: relative;
     margin: 20px 0;
+}
+@media screen and (max-width: 500px){
+    .vue-form div{
+        margin: 5px 0;
+    }
 }
 .vue-form h4,
 .vue-form .label {

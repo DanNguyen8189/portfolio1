@@ -127,7 +127,7 @@ button:focus {
 }
 
 /*Cases of different screen sizes*/
-@media screen and (min-width: 7000px) {
+@media screen and (min-width: 700px) {
     .drop-down-menu{
         display: none;
     }

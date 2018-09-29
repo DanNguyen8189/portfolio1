@@ -9,8 +9,9 @@
 
 <style>
 #image-credit{
+    display: block;
     color: white;
-    position: absolute; /*these 2 lines allow us to put at bottom of page*/
+    position: absolute; /*these 3 lines allow us to put at bottom right of page*/
     bottom: 0;
     right: 30px;
     opacity: 0.6;

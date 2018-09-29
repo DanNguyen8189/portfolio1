@@ -22,6 +22,7 @@
 div{
     width: 100%;
     height: 100%;
+    text-align: center;
 }
 
 ul{
@@ -29,11 +30,12 @@ ul{
     padding-left: 0; /*needed to remove list indentation*/
 }
 h1{
-    color: rgba(255, 255, 255, 0.7)
+    color: rgba(255, 255, 255, 0.7);
+    display: inline-block;
 }
 li{
-    color: rgba(255, 255, 255, 0.76);
-    background: rgba(73, 47, 47, 0.733);
+    color: rgba(0, 0, 0, 0.76);
+    background: rgba(255, 255, 255, 0.733);
     border-radius: 15%;
     padding: 50px;
     margin: 5%;

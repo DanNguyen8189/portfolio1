@@ -7,7 +7,6 @@
         </ul>
 
     </div>
-    
 </template>
 
 <script>
@@ -35,17 +34,17 @@ export default{
 </script>
 
 <style scoped>
+
 ul{
     display: block;
-    position: relative; 
-    margin: 50px auto;
-    /*margin-left: -29px;*/
-    right: 20px;
+    text-align: center;
+    margin: 70px 0;
+    padding: 0; /*needed to correctly center*/
 }
 li{
     display: inline-block;
     list-style: none;
-    position: relative;
+    position: relative; /*The rotation works because of this*/
     margin: 15px 30px;
 }
 
@@ -97,9 +96,13 @@ button:active{
 .spin {
     width: 230px;
     height: 230px;
-    padding: 25px;
+    padding: 25px; /*Space between outer circle and inner circle*/
 }
 @media screen and (max-width: 700px){
+
+    ul{
+        margin: auto;
+    }
     .spin{
         width: 150px;
         height:150px;
@@ -110,12 +113,13 @@ button:active{
     }
 }
 @media screen and (max-width: 470px){
+
     li{
         margin: 7.5px 15px;
     }
     .spin{
-        width: 100px;
-        height: 100px;
+        width: 120px;
+        height: 120px;
         padding: 10px;
     }
     button{

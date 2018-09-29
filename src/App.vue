@@ -22,10 +22,6 @@
     position: relative; /*allows us to absolutely position elements inside div later*/
     min-height: 100%; /*ensure it stays the full height of the screen even if there is hardly any content.*/
 }
-#view{
-    text-align: center;
-    margin: 4% auto;
-}
 
 /*Router animation properties*/
 .fade-enter-active,
