@@ -49,17 +49,25 @@ export default{
     left: 15px;
     float: left;
     margin: 0;
-    min-width: 100px;
-    max-width: 100px;
-    min-height: 60px;
-    max-height: 60px;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 120px;
+    max-height: 120px;
     opacity: 0.6;
+}
+@media screen and (min-aspect-ratio: 1/1){
+    #signature{
+        min-width: 120px;
+        max-width: 120px;
+        min-height: 72px;
+        max-height: 72px;
+    }
 }
 #navigationlinks{
     display: inline-block;
     padding: 0;
     margin: 0;
-    margin-top: 5px;
+    margin-top: 7px;
 } 
 #navigationlinks li{
     float:left; /*determines order of the links. Floating right does it backwards*/
@@ -75,9 +83,13 @@ export default{
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color: inherit;
     transition: inherit;
-    padding: 12px 32px;
+    padding: 25px 32px;
 }
-
+@media screen and (min-aspect-ratio: 1/1){
+    #navigationlinks button{
+        padding: 12px 32px;
+    }
+}
 #navigationlinks button:hover, #navigationlinks button:active{
     background-color: rgba(255, 255, 255, 0.055);
     text-decoration:underline;

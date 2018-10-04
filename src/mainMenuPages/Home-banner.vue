@@ -13,43 +13,42 @@
 
 <style scoped>
 #text{
-    margin: 4% auto;
+    margin: 20vh auto;
     color: white;
-    opacity: 0.9;
+    opacity: 0.95;
     display: block;
     text-align: center;
 }
 #text h1{
-    display: inline-block;
-    font-size: 5em;
+    display: block;
+    font-size: 1100%;
     font-family: 'Raleway', sans-serif;
     opacity: inherit;
 }
+@media screen and (min-aspect-ratio: 1/1){
+    #text h1{
+        display: inline-block;
+        font-size: 600%;
+    }
+}
 #first_name{
     color: inherit;
-    margin-right: 10px;
 }
 #last_name{
-    color: #7ed3b4;
+    color: #94ffd8;
 }
 
 #text h4{
     display: block;
     /*font-family: 'Actor', sans-serif;*/
     font-family: 'Architects Daughter', sans-serif;
+    font-size: 300%;
     color: inherit;
     opacity: inherit;
 }
-
-@media only screen and (max-width: 510px) {
-    .social_media li{
-        margin: 26.25px 15px;
-    }
-    .social_media li a{
-        width: 52.5px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 27px;
+@media screen and (min-aspect-ratio: 1/1){
+    #text h4{
+        font-size: 200%;
     }
 }
 </style>

@@ -1,6 +1,7 @@
 /*template for expandable menu that appears on smaller screens*/
 <template>
     <div>
+        <img id='signature' src='http://i.imgur.com/EglY7hp.png' style='width:10%;height:10%;'>
         <nav class='drop-down-menu' style='background-color: rgba(0,0,0,0.4) !important'>
             <transition name="fade">
                 <ul id = 'navigationlinks' v-if='show'>
@@ -46,6 +47,16 @@ export default{
 </script>
 
 <style scoped>
+#signature{
+    left: 15px;
+    float: left;
+    margin: 0;
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 150px;
+    max-height: 150px;
+    opacity: 0.6;
+}
 .drop-down-menu {
     margin-right: 1em;
     z-index: 1;
@@ -63,24 +74,29 @@ export default{
     background: rgb(204, 204, 204);
 }
 #navigationlinks:after {
-    width:0px;
-    height:0px;
+    /*This is the small arrow*/
     position: absolute;
     top:0%;
-    right: 21px;
+    right: 60px;
     content:'';
     transform:translate(0%, -100%);
-    border-left:7px solid transparent;
-    border-right:7px solid transparent;
-    border-bottom:7px solid rgb(204, 204, 204);
+    border-left:15px solid transparent;
+    border-right:15px solid transparent;
+    border-bottom:15px solid rgb(204, 204, 204);
 }
 #navigationlinks li {
     list-style: none;
     float:none;
     display:block;
-    font-size: inherit;
+    font-size: 2.5em;
     font-family: inherit;
     color: rgb(110, 110, 110);
+}
+
+@media screen and (min-aspect-ratio: 2/3) {
+    #navigationlinks li{
+        font-size: 1.5em;
+    }
 }
 #navigationlinks button{
     width: 100%;
@@ -89,10 +105,7 @@ export default{
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color: inherit;
     transition: inherit;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 45px;
-    padding-right: 60px;
+    padding: 40px 90px;
     text-align: left;
 }
 #navigationlinks button:hover, #navigationlinks button:active{
@@ -112,30 +125,39 @@ button:focus {
 }
 .drop-down-symbol {
     display: none;
-    padding:20px;
+    padding:60px 55px;
         /*float:left;*/
     box-shadow:0px 1px 1px rgba(0,0,0,0.15);
     border-radius:3px;
     background: rgb(204, 204, 204);
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
     color:rgb(185, 185, 185);
-    font-size:20px;
+    font-size:60px;
     transition:color linear 0.15s;
+}
+@media screen and (min-aspect-ratio: 2/3) {
+    .drop-down-symbol{
+        padding: 40px 35px;
+        font-size: 40px;
+    }
 }
 .drop-down-symbol:hover{
     color: #4e816f;
 }
 
 /*Cases of different screen sizes*/
-@media screen and (min-width: 700px) {
+@media screen and (min-aspect-ratio: 1/1) {
     .drop-down-menu{
         display: none;
     }
     .drop-down-symbol{
         display: none;
     }
+    #signature{
+        display: none;
+    }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-aspect-ratio: 1/1) {
     .drop-down-menu{
         display: inline-block;
     }

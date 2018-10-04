@@ -38,7 +38,7 @@ export default{
 ul{
     display: block;
     text-align: center;
-    margin: 70px 0;
+    margin: 5% 0;
     padding: 0; /*needed to correctly center*/
 }
 li{
@@ -94,8 +94,8 @@ button:active{
     transition-duration: .4s;
 }
 .spin {
-    width: 230px;
-    height: 230px;
+    width: 250px;
+    height: 250px;
     padding: 25px; /*Space between outer circle and inner circle*/
 }
 @media screen and (max-width: 700px){
@@ -104,15 +104,15 @@ button:active{
         margin: auto;
     }
     .spin{
-        width: 150px;
-        height:150px;
-        padding: 15px;
+        width: 180px;
+        height:180px;
+        padding: 20px;
     }
     button{
         font-size: 50px;
     }
 }
-@media screen and (max-width: 470px){
+@media screen and (max-width: 450px){
 
     li{
         margin: 7.5px 15px;

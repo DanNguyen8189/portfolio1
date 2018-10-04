@@ -22,22 +22,26 @@ export default{
 }
 </script>
 <style scoped>
+
 #navigation{
     text-align: right;
-    font-size: 17px;
+    font-size: 200%;
     font-family: 'Actor', sans-serif;
     color: #ffffffc2;
     background-color: rgba(0,0,0,0.05);
     transition: color linear 0.15s;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-aspect-ratio: 1/1) {
+    #navigation{
+        font-size: 150%;
+    }
     #bar-menu {
         width:100%;
         box-shadow:0px 1px 1px rgba(255, 255, 255, 0.30);
         border-radius:3px;
     }
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-aspect-ratio: 1/1) {
     #bar-menu{
         display: none;
     }

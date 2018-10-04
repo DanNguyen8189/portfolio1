@@ -329,7 +329,6 @@ p{
 
 .vue-form {
     font-size: 16px;
-    width: 500px;
     padding: 15px 30px;
     border-radius: 4px;
     margin: 0 auto 25px;
