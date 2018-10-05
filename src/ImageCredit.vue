@@ -15,8 +15,14 @@
     bottom: 0;
     right: 30px;
     opacity: 0.6;
-    font-size: 10px;
+    font-size: 30px;
     font-family: 'Actor', sans-serif;
+}
+
+@media screen and (min-aspect-ratio: 1/1){
+    #image-credit{
+        font-size: 10px;
+    }
 }
 </style>
 

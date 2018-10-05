@@ -129,9 +129,9 @@ button:focus {
         /*float:left;*/
     box-shadow:0px 1px 1px rgba(0,0,0,0.15);
     border-radius:3px;
-    background: rgb(204, 204, 204);
+    background: rgb(16, 175, 127);
     text-shadow:0px 1px 0px rgba(0,0,0,0.5);
-    color:rgb(185, 185, 185);
+    color:rgb(255, 255, 255);
     font-size:60px;
     transition:color linear 0.15s;
 }

@@ -9,8 +9,16 @@ body{
     padding: 0;
     height:100%;
     width: 100%;
-    /*background-image: url('https://i.imgur.com/IEF6h3s.jpg');*/
+    background-image: url('https://i.imgur.com/IEF6h3s.jpg');
     background-size: cover;
-    background-position: center-bottom;
-    background-attachment: fixed; /*fix on scroll*/
+    background-position: 50% 0%;
+    background-attachment: fixed;
 }
+
+/*
+#wrapper{
+    background-image: url('https://i.imgur.com/IEF6h3s.jpg');
+    background-size: cover;
+    background-position: 100% 50%;
+    background-attachment: fixed; 
+}*/

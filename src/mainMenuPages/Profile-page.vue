@@ -1,9 +1,9 @@
 <template>
     <div>
         <ul class = 'profile_buttons'>
-            <li><button class="spin circle" @click = 'goSkills()'><i class="fa fa-wrench"></i><p>Skills</p></button></li>
-            <li><button class="spin circle" @click = 'goProjects()'><i class="fa fa-leaf"></i><p>Projects</p></button></li>
-            <li><button class="spin circle" @click = 'goEducation()'><i class="fa fa-bicycle"></i><p>Activities</p></button></li>
+            <li><div class='button'><button class="spin circle" @click = 'goSkills()'><i class="fa fa-wrench"></i><p>Skills</p></button></div></li>
+            <li><div class='button'><button class="spin circle" @click = 'goProjects()'><i class="fa fa-leaf"></i><p>Projects</p></button></div></li>
+            <li><div class='button'><button class="spin circle" @click = 'goEducation()'><i class="fa fa-bicycle"></i><p>Activities</p></button></div></li>
         </ul>
 
     </div>
@@ -42,12 +42,15 @@ ul{
     padding: 0; /*needed to correctly center*/
 }
 li{
-    display: inline-block;
-    list-style: none;
-    position: relative; /*The rotation works because of this*/
-    margin: 15px 30px;
+    display: block;
+    margin: 7% 30px;
 }
-
+.button{
+    /*These wrapper divs are needed because we need to keep these outer display and position properties 
+    for the rotation to work properly*/
+    display: inline-block;
+    position: relative; 
+}
 p{
     margin-top: -15px;
     font-size: .5em;
@@ -72,12 +75,12 @@ button {
     background-color:rgba(255, 255, 255, 0.7);
     border-radius: 100%;
     display: inline-block;
-    font-size: 70px;
+    font-size: 120px;
     text-align: center;
     transition: 0.3s;
     /*border-style: double;
     border-width: 20px;*/
-    border: 3px double rgba(255, 255, 255, 0.5);
+    border: 15px double rgba(255, 255, 255, 0.5);
     background-clip: content-box; /*clips the background at the edge of the content box*/
     margin:0 auto;
 }
@@ -94,36 +97,28 @@ button:active{
     transition-duration: .4s;
 }
 .spin {
-    width: 250px;
-    height: 250px;
-    padding: 25px; /*Space between outer circle and inner circle*/
+    width: 400px;
+    height: 400px;
+    padding: 40px; /*Space between outer circle and inner circle*/
 }
-@media screen and (max-width: 700px){
-
-    ul{
-        margin: auto;
+@media screen and (min-aspect-ratio: 3/4){
+    .spin {
+        width: 250px;
+        height: 250px;
+        padding: 25px; /*Space between outer circle and inner circle*/
     }
-    .spin{
-        width: 180px;
-        height:180px;
-        padding: 20px;
+    p{
+        font-size: .5em;
     }
     button{
-        font-size: 50px;
+        font-size: 70px;
+        border: 10px double rgba(255, 255, 255, 0.5);
     }
 }
-@media screen and (max-width: 450px){
-
+@media screen and (min-aspect-ratio: 1/1){
     li{
-        margin: 7.5px 15px;
-    }
-    .spin{
-        width: 120px;
-        height: 120px;
-        padding: 10px;
-    }
-    button{
-        font-size: 40px;
+        display: inline-block;
+        margin: 3% 30px;
     }
 }
 .spin:hover {

@@ -17,7 +17,6 @@
         <ul class=social_media>
             <li id='linkedin'><a href='https://www.linkedin.com/in/dannguyen8189/' target='_blank'><i class='fa fa-linkedin' aria-hidden='true'></i></a></li>
             <li id='github'><a href='https://github.com/DanNguyen8189' target='_blank'><i class='fa fa-github' aria-hidden='true'></i></a></li>
-            <li id='instagram'><a href=# target='_blank'><i class='fa fa-instagram' aria-hidden='true'></i></a></li>
             <li id='twitter'><a href='https://twitter.com/Danimalspirit' target='_blank'><i class='fa fa-twitter' aria-hidden='true'></i></a></li>
         </ul>
 
@@ -175,11 +174,7 @@ h1{
     display: block;
     text-align: center;
 }
-@media screen and (max-width: 510px){
-    h1{
-        margin: auto; /*shoft closer to top*/
-    }
-}
+
 hr {
     width: 90%;
     display: block;
@@ -189,16 +184,15 @@ hr {
     margin: 0;
     padding: 0;
 }
-/*#wrapper{
-    background: rgba(0, 0, 0, 0.5);
-    padding: 20px 20px;
-    margin: 0 5%;
-    border-radius: 5px;
-}*/
 p{
     color: rgba(255, 255, 255, 0.9);
-    font-size: 18px;
+    font-size: 10em;
     font-family: 'Quicksand', sans-serif;
+}
+@media screen and (min-aspect-ratio: 1/1){
+    p{
+        font-size: 18px;
+    }
 }
 #phone, #envelope{
     font-size: 18px;
@@ -213,14 +207,7 @@ p{
     display: inline-block;
     margin: 10px 30px;
 }
-@media only screen and (max-width: 510px){
-    h1{
-        font-size: 35px;
-    }
-    p{
-        font-size: 12px;
-    }
-}
+
 .social_media{
     /*position: absolute;
     top: 9rem;
@@ -230,7 +217,7 @@ p{
     text-align: center;
     padding: 0; /*needed to correectly center*/
     position: relative;
-    margin: 10px auto; 
+    margin: 50px auto; 
     color: black;
 }
 
@@ -238,18 +225,26 @@ p{
     display: inline-block;
     list-style: none;
     position: relative;
-    margin: 35px 20px;
+    margin: 35px 40px;
+}
+@media screen and (min-aspect-ratio:1/1){
+    .social_media{
+        margin: 15px auto;
+    }
+    .social_media li{
+        margin: 35px 20px;
+    }
 }
 
 .social_media li a{
     /*original width: 70 height: 40*/
-    width: 56px;
-    height: 32px;
+    width: 140px;
+    height: 80px;
     background: #fff;
     display: block;
     text-align: center;
-    line-height: 32px;
-    font-size: 28.8px;
+    line-height: 28.8px;
+    font-size: 70px;
     transition: 0.5s;
     color: black;
     opacity: 0.75;
@@ -315,7 +310,7 @@ p{
 }
 
 
-@media only screen and (max-width: 510px) {
+/*@media only screen and (max-width: 510px) {
     .social_media li{
         margin: 7% 3%;
     }
@@ -325,21 +320,31 @@ p{
         line-height: 30px;
         font-size: 27px;
     }
+}*/
+
+@media screen and (min-aspect-ratio: 1/1){
+    .social_media li a{
+        width: 70px;
+        height: 40px;
+        line-height: 30px;
+        font-size: 35px;
+    }
 }
 
 .vue-form {
-    font-size: 16px;
-    padding: 15px 30px;
+    font-size: 35px;
+    padding: 40px 50px;
     border-radius: 4px;
     margin: 0 auto 25px;
-    width: 500px;
+    width: 90%;
     background-color: rgb(127, 182, 148);
     box-shadow: 0 4px 6px 0 rgba(0, 0, 0, 0.3);
 }
-@media screen and (max-width: 500px){
+@media screen and (min-aspect-ratio: 1/1){
     .vue-form{
-        width: 96%;
-        padding: 10px 25px;
+        font-size: 16px;
+        width: 500px;
+        padding: 15px 30px;
     }
 }
 .vue-form fieldset {
@@ -348,20 +353,21 @@ p{
 .vue-form legend {
     padding-bottom: 10px;
     border-bottom: 1px solid #ecf0f1;
+    font-size: 1.2em;
     font-family: 'Architects Daughter', sans-serif;
 }
-@media screen and (max-width: 500px){
+@media screen and (min-aspect-ratio: 1/1){
     .vue-form legend{
-        font-size: 15px;
+        font-size: 1em;
     } 
 }
 .vue-form div {
     position: relative;
-    margin: 20px 0;
+    margin: 50px 0;
 }
-@media screen and (max-width: 500px){
+@media screen and (min-aspect-ratio: 1/1){
     .vue-form div{
-        margin: 5px 0;
+        margin: 20px 0;
     }
 }
 .vue-form h4,
@@ -387,12 +393,24 @@ p{
 .vue-form input[type="text"],
 .vue-form input[type="email"],
 .vue-form textarea{
-    padding: 12px;
-    border: 1px solid #cfd9db;
+    padding: 20px;
+    border: 3px solid #cfd9db;
     background-color: #ffffff;
     border-radius: 0.25em;
     box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
 }
+@media screen and (min-aspect-ratio: 1/1){
+    .vue-form input[type="text"],
+    .vue-form input[type="email"],
+    .vue-form textarea{
+        padding: 12px;
+        border: 1px solid #cfd9db;
+        background-color: #ffffff;
+        border-radius: 0.25em;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.08);
+    }
+}
+
 .vue-form input[type="text"]:focus,
 .vue-form input[type="email"]:focus,
 .vue-form textarea:focus{
@@ -423,13 +441,18 @@ p{
     border: none;
     background: #2c3e50;
     border-radius: 0.25em;
-    padding: 12px 20px;
+    padding: 30px 50px;
     color: #ffffff;
     font-weight: bold;
     float: right;
     cursor: pointer;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+}
+@media screen and (min-aspect-ratio: 1/1){
+    .vue-form input[type="submit"]{
+        padding: 12px 20px;
+    }
 }
 .no-touch .vue-form input[type="submit"]:hover {
     background: #42a2e1;
@@ -448,12 +471,17 @@ p{
 .vue-form .error-message p {
     /*background: #a03527;*/
     color: #ffffff;
-    font-size: 1.4rem;
+    font-size: 3rem;
     text-align: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     border-radius: 0.25em;
     padding: 16px;
+}
+@media screen and (min-aspect-ratio: 1/1){
+    .vue-form .error-message p{
+        font-size: 1.4rem;
+    }
 }
 .vue-form .error {
     border-color: #a7392a !important;
@@ -463,8 +491,14 @@ p{
     position: absolute;
     right: 0px;
     top: 0px;
-    font-size: 10px;
-    padding: 4px;
+    font-size: 2.5rem;
+    padding: 6px;
+}
+@media screen and (min-aspect-ratio: 1/1){
+    .vue-form .counter{
+        font-size: 1rem;
+        padding: 4px;
+    }
 }
 .vue-form .red{
     background-color: #a03527;
