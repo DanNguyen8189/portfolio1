@@ -243,8 +243,8 @@ p{
     background: #fff;
     display: block;
     text-align: center;
-    line-height: 28.8px;
-    font-size: 70px;
+    line-height: 0px; /*removing this breaks the mobile version?*/
+    font-size: 80px;
     transition: 0.5s;
     color: black;
     opacity: 0.75;
@@ -326,8 +326,7 @@ p{
     .social_media li a{
         width: 70px;
         height: 40px;
-        line-height: 30px;
-        font-size: 35px;
+        font-size: 37px;
     }
 }
 

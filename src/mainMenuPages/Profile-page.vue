@@ -3,7 +3,7 @@
         <ul class = 'profile_buttons'>
             <li><div class='button'><button class="spin circle" @click = 'goSkills()'><i class="fa fa-wrench"></i><p>Skills</p></button></div></li>
             <li><div class='button'><button class="spin circle" @click = 'goProjects()'><i class="fa fa-leaf"></i><p>Projects</p></button></div></li>
-            <li><div class='button'><button class="spin circle" @click = 'goEducation()'><i class="fa fa-bicycle"></i><p>Activities</p></button></div></li>
+            <li><div class='button'><button class="spin circle" @click = 'goActivites()'><i class="fa fa-bicycle"></i><p>Activities</p></button></div></li>
         </ul>
 
     </div>
@@ -11,16 +11,8 @@
 
 <script>
 export default{
-    data(){
-        return{
-            /*Not currently in use*/
-            profileItems:[{id: Education, route: '/profile/education'},
-                          {id: Skills, route: '/profile/skills'},
-                          {id: Projects, route: '/profile/projects'}]
-        }
-    },
     methods:{
-        goEducation(){
+        goActivites(){
             this.$router.push('/profile/activites')
         },
         goSkills(){
@@ -38,12 +30,14 @@ export default{
 ul{
     display: block;
     text-align: center;
-    margin: 5% 0;
+    margin: 4% 0;
     padding: 0; /*needed to correctly center*/
 }
 li{
     display: block;
-    margin: 7% 30px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    margin-right: 30px;
 }
 .button{
     /*These wrapper divs are needed because we need to keep these outer display and position properties 
@@ -52,10 +46,11 @@ li{
     position: relative; 
 }
 p{
-    margin-top: -15px;
+    display: block;
     font-size: .5em;
-    font-family: 'Amatic SC', cursive;
-    font-weight: 800;
+    /*font-family: 'Amatic SC', cursive;*/
+    /*font-family: 'Neucha', cursive;*/
+    font-family: 'Satisfy', cursive;
 }
 
 /*Button image styling*/
@@ -72,7 +67,7 @@ p{
 button {
     box-sizing: border-box; /*The width and height properties (and min/max properties) 
                             includes content, padding and border*/
-    background-color:rgba(255, 255, 255, 0.7);
+    background-color:rgba(255, 255, 255, 0.781);
     border-radius: 100%;
     display: inline-block;
     font-size: 120px;
@@ -83,6 +78,7 @@ button {
     border: 15px double rgba(255, 255, 255, 0.5);
     background-clip: content-box; /*clips the background at the edge of the content box*/
     margin:0 auto;
+    line-height: 50px;
 }
 button::before, button::after {
     box-sizing: inherit;
@@ -169,6 +165,6 @@ button:active{
 .fade-enter,
 .fade-leave-active {
     opacity: 0;
-    transform: scale(1.5);
+    transform: scale(.5);
 }
 </style>

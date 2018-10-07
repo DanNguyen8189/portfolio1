@@ -27,7 +27,6 @@ export default{
     text-align: right;
     font-size: 200%;
     font-family: 'Actor', sans-serif;
-    color: #ffffffc2;
     background-color: rgba(0,0,0,0.05);
     transition: color linear 0.15s;
 }

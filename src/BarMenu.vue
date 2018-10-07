@@ -6,8 +6,8 @@
             <!--create a button for each item in menuItems, which was passed down from Navigation-component-->
             <li v-for='item in menuItems' 
                 :key = 'item.id'
-                :class="{ 'active': (item === selected) }">
-                    <button @click = 'selected = item; goTo(item.route)'>{{ item.id }}</button>
+                :class="{ 'active': (item === mutableSelected) }">
+                    <button @click = 'mutableSelected = item; goTo(item.route)'>{{ item.id }}</button>
             </li>
         </ul>
     </div>
@@ -17,6 +17,11 @@
 export default{
     data(){
         return{
+            mutableSelected: this.selected,
+            /*Inline props are same as an immutable value, 
+            because every time the parent re-renders, the mutated child prop will be reset back to the inline value. 
+            If you want to allow inline props as the initial value, declare a field in your data that uses the 
+            props value*/
         }
     },
     /*data expected from parent component (Navigation-component)*/ 
@@ -74,7 +79,8 @@ export default{
     list-style:none;
     font-size: inherit;
     font-family: inherit;
-    color: inherit;
+    color: rgba(255, 255, 255, 0.74);
+    box-sizing: border-box;
 } 
 
 #navigationlinks button{
@@ -100,7 +106,8 @@ button:focus {
     outline-color:aquamarine;
 }
 .active{
-    color:#7ed3b4 !important;
+    color: #7ed3b4 !important; 
+    font-weight: bold;
 }
 </style>
 

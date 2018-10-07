@@ -9,7 +9,7 @@
                     <li v-for='item in menuItems' 
                         :key = 'item.id'
                         :class="{ 'active': (item === selected) }">
-                            <button @click = 'selected = item; goTo(item.route)'>{{ item.id }}</button>
+                            <button @click = 'mutableSelected = item; goTo(item.route)'>{{ item.id }}</button>
                     </li>
                 </ul>
             </transition>
@@ -23,7 +23,12 @@
 export default{
     data() {
         return{
-            show: false
+            show: false,
+            mutableSelected: this.selected,
+            /*Inline props are same as an immutable value, 
+            because every time the parent re-renders, the mutated child prop will be reset back to the inline value. 
+            If you want to allow inline props as the initial value, declare a field in your data that uses the 
+            props value*/
         }
     },
     /*data expected to be passed down from parent component (Navigation-component)*/
@@ -122,6 +127,7 @@ button:focus {
     color:rgb(22, 66, 45) !important;
     background-color: rgb(94, 143, 123);
     font-weight: bold;
+
 }
 .drop-down-symbol {
     display: none;
