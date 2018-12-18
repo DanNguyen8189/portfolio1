@@ -77,7 +77,7 @@
 var emailRegExp = /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/;
 
 import Firebase from 'firebase'
-import apiConfig from 'C:/Users/DanXa/Documents/apiKeys';
+import apiConfig from 'C:/Users/DanXa/Documents/Coding Projects/personal-website/apiKeys';
 let config = {
     apiKey: `${apiConfig.myKey}`,
     authDomain: `${apiConfig.myDomain}`,
