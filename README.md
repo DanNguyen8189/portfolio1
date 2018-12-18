@@ -40,7 +40,9 @@ firebase deploy --only functions
 
 # deploy website using firebase hosting
 https://medium.com/@ShayneOSullivan/deploy-a-vue-js-app-with-firebase-hosting-3fc420cf3998
+```
 
 ## A few notes
+```
 there's a file called apiKeys.js (included in the gitignore) that is used to hold private api keys. It's imported in Contact-page.vue
 ```
