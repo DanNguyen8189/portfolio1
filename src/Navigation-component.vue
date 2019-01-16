@@ -14,7 +14,7 @@ export default{
             selected: 'HOME',
             /*Array of menu items to be rendered*/
             menuItems: [{id: 'HOME', route: '/'}, 
-                        {id: 'ABOUT', route: '/about' },   
+                        //{id: 'ABOUT', route: '/about' },   
                         {id: 'PROFILE', route: '/profile'}, 
                         {id: 'CONTACT', route: '/contact'}]
         }

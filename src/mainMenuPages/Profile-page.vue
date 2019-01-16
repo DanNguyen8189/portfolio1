@@ -1,7 +1,7 @@
 <template>
     <div>
         <ul class = 'profile_buttons'>
-            <li><div class='button'><button class="spin circle" @click = 'goSkills()'><i class="fa fa-wrench"></i><p>Skills</p></button></div></li>
+            <li><div class='button'><button class="spin circle" @click = 'goSkills()'><i class="fa fa-user"></i><p>About</p></button></div></li>
             <li><div class='button'><button class="spin circle" @click = 'goProjects()'><i class="fa fa-leaf"></i><p>Projects</p></button></div></li>
             <li><div class='button'><button class="spin circle" @click = 'goActivites()'><i class="fa fa-bicycle"></i><p>Activities</p></button></div></li>
         </ul>
@@ -57,7 +57,7 @@ p{
 .fa-bicycle{
     color:rgb(68, 71, 255);
 }
-.fa-wrench{
+.fa-user{
     color:rgb(255, 119, 70);
 }
 .fa-leaf{
