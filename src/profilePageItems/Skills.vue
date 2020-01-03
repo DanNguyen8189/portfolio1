@@ -1,18 +1,22 @@
 <template>
     <div>
-        <back-button></back-button>
-        <h1>Page under construction</h1>
+        <!--<back-button></back-button>
+        <h1>Page under construction</h1>-->
         <p>
-            At the beginning of college, I wasn't sure if I was doing the right thing. I was coming
-            in as a computer engineering major with no prior experience. As time progressed, however, I came
-            to really enjoy software engineering and so I made the switch to computer science.
-            <br/>
-            I look forward to learning new things! Realizing the importance of pushing my boundaries, I joined 
-            Engineers for a Sustainable World and eventually joined the UCSD Solar Car team, in which I became 
-            software team co-lead as of November 2019.  
-            <br/>
-            In my spare time I love drawing. I'm always trying to improve at it! Art is never easy,
-            but I enjoy it anyway. I also enjoy playing soccer and going for runs on the beach. 
+            A little about myself
+        </p>
+        <p>
+            My name is Dan and I'm a software developer from Los Angeles, California.
+        </p>
+        <p>
+            I'm a recent graduate from UC San Diego with a B.S. in Computer Science. I have experience from school projects
+            and outside projects such as UCSD Solar Car and this personal website. I'm always looking to learn.
+            I'm currently looking for a full time permanent position or internship in software engineering! 
+
+        </p> 
+        <p>
+            In my spare time I partake in a variety of hobbies and activites. I love drawing and posting my works on instagram and twitter. 
+            I also enjoy playing soccer and learning to salsa dance!  
         </p>
         <!--<p>
             Programming Languages:
@@ -38,11 +42,12 @@ h1{
     color: rgba(255, 255, 255, 0.7)
 }
 p{
-    color: rgba(0, 0, 0, 0.76);
-    background: rgba(255, 255, 255, 0.733);
-    border-radius: 15%;
+    color: #7a7a7a;
+    background: white;
     padding: 50px;
     margin: 5%;
+    font-size: 15px;
+    height: 100%;
 }
 .fade-enter-active,
 .fade-leave-active {

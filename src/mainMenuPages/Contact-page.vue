@@ -26,7 +26,7 @@
           </a>
         </li>
         <li id="twitter">
-          <a href="https://twitter.com/Danimalspirit" target="_blank">
+          <a href="https://twitter.com/Danimalphantom" target="_blank">
             <i class="fa fa-twitter" aria-hidden="true"></i>
           </a>
         </li>
@@ -395,7 +395,8 @@ p {
 }
 .vue-form h4,
 .vue-form .label {
-  color: #94aab0;
+  font-size: 15px;
+  color: white;
   margin-bottom: 10px;
 }
 .vue-form .label {
