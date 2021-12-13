@@ -1,6 +1,6 @@
 # personal-website
-
-Live website at: https://dannguyencodes.firebaseapp.com
+First version of my portfolio website! It is not the one I'm using now but it can still be viewed
+at: https://dannguyencodes.firebaseapp.com
 
 > A Vue.js project
 
